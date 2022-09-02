@@ -102,37 +102,38 @@
                      <div class="col-md-9 col-sm-7">
                         <nav class="navigation navbar navbar-expand-md navbar-dark ">
                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-                              <span class="navbar-toggler-icon"></span>
+                           <span class="navbar-toggler-icon"></span>
                            </button>
                            <div class="collapse navbar-collapse" id="navbarsExample04">
                               <ul class="navbar-nav mr-auto">
-                                 <li class="nav-item active">
-                                    <a class="nav-link" href="index.html"> Home </a>
+                                 <li class="nav-item ">
+                                    <a class="nav-link" href="index.php"> Home  </a>
                                  </li>
                                  <li class="nav-item">
-                                    <a class="nav-link" href="about.html">about</a>
+                                    <a class="nav-link" href="about.php">about</a>
                                  </li>
                                  <!-- <li class="nav-item">
                                     <a class="nav-link" href="service.html">services</a>
                                  </li> -->
                                  <!-- <li class="nav-item">
+                               
                                     <a class="nav-link" href="team.html">team </a>
                                  </li> -->
                                  <li class="nav-item">
-                                    <a class="nav-link" href="client.html">Testimonials</a>
+                                    <a class="nav-link" href="testimonial.php">Testimonials</a>
                                  </li>
-                                 <li class="nav-item">
-                                    <a class="nav-link" href="contact.html"> contact us </a>
+                                 <li class="nav-item active">
+                                    <a class="nav-link" href="contact.php"> contact us </a>
                                  </li>
                               </ul>
                            </div>
                         </nav>
                      </div>
                      <div class="col-md-3 col-sm-5 d_none">
-                        <ul class="sign">
-                           <li><a class="sign_btn" href="#">sign up now</a></li>
+                     <ul class="sign">
+                           <li><a class="sign_btn" href="dash/pages-sign-up.php">sign up now</a></li>
                            <li class="nav-item">
-                              <a class="nav-link" href="contact.html"> Login </a>
+                              <a class="nav-link" href="dash/pages-sign-in.php"> Login </a>
                            </li>
                            <!-- <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li> -->
                         </ul>
@@ -144,38 +145,45 @@
       </header>
       <!-- end header inner -->
       <!-- end header -->
-     
-      <!-- about section -->
-      <div id="about" class="about">
-         <div class="container-fluid">
+ 
+      <!-- contact  section -->
+      <div id="contact" class="contact ">
+         <div class="container">
             <div class="row">
-               <div class="col-md-12 col-lg-7">
-                  <div class="about_box">
-                     <div class="titlepage">
-                        <h2><strong class="yellow">About US</strong><br> Promoting rights and Enhancing protection of employees abroad</h2>
-                     </div>
-                     <!-- <h3>EVERYTHING YOU NEED IN ONE SOLUTION</h3> -->
-                     <!-- <span>HELP YOUR NEXT CAREER MOVE MORE SMOOTHER AND <br> MORE EFFICIENT</span> -->
-                     <p>Labor Externalization is a Government of Uganda strategic initiative intended to facilitate 
-                        recruitment of Ugandan migrant workers to decent employment opportunities and promote the 
-                        protection of their rights and welfare in destination countries like UAE, Saudi Arabia, Jordan, Bahrain, Oman, Qatar, Iraq, 
-                        Somalia, Afghanistan and Mali.The aim of TMIS is to track and monitor employees to ensure their safety.</p>
-                     <span class="try">contact us for</span>
-                     <a class="read_morea" href="contact.html">More Info <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2><strong class="yellow">Contact us</strong><br>Share with us</h2>
                   </div>
                </div>
-               <div class="col-md-12 col-lg-5">
-                  <div class="about_img">
-                     <figure><img src="images/about_img2.jpg" alt="#"/></figure>
+            </div>
+            <div class="row">
+               <div class="col-md-8 offset-md-2">
+                  <form id="post_form" class="contact_form">
+                     <div class="row">
+                        <div class="col-md-12 ">
+                           <input class="contact_control" placeholder=" Name" type="type" name="Name"> 
+                        </div>
+                        <div class="col-md-12">
+                           <input class="contact_control" placeholder="Email" type="type" name="Email"> 
+                        </div>
+                        <!-- <div class="col-md-12">
+                           <input class="contact_control" placeholder="Phone Number " type="type" name="Phone Number ">                          
+                        </div> -->
+                        <div class="col-md-12">
+                           <textarea class="textarea" placeholder="Message" type="type" Message="Name">Message </textarea>
+                        </div>
+                        <div class="col-md-12">
+                           <button class="send_btn">Send</button>
+                        </div>
+                  </form>
                   </div>
                </div>
             </div>
          </div>
       </div>
-      <!-- about section -->
-     
+      <!-- end contact  section -->
       <!--  footer -->
-      <footer>
+      <footer >
          <div class="footer">
             <div class="container">
                <div class="row">
@@ -201,15 +209,15 @@
                   <div class="col-lg-2 col-md-6 col-sm-6">
                      <h3>Menus</h3>
                      <ul class="link_icon">
-                        <li class="active"> <a href="index.html"> Home</a></li>
+                        <li class="active"> <a href="index.php"> Home</a></li>
                         <li>
                            <a href="about.html">
                               </i>About Us
                         </li>
                         <!-- <li> <a href="service.html"> </i>Services</a></li> -->
                         <!-- <li> <a href="team.html"></i>Team</a></li> -->
-                        <li> <a href="client.html"></i>Testimonials</a></li>
-                        <li> <a href="contact.html"></i>Contact us</a></li>
+                        <li> <a href="testimonial.php"></i>Testimonials</a></li>
+                        <li> <a href="contact.php"></i>Contact us</a></li>
                      </ul>
                   </div>
                   <div class="col-lg-2 col-md-6 col-sm-6">

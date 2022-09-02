@@ -107,10 +107,10 @@
                            <div class="collapse navbar-collapse" id="navbarsExample04">
                               <ul class="navbar-nav mr-auto">
                                  <li class="nav-item active">
-                                    <a class="nav-link" href="index.html"> Home </a>
+                                    <a class="nav-link" href="index.php"> Home </a>
                                  </li>
                                  <li class="nav-item">
-                                    <a class="nav-link" href="about.html">about</a>
+                                    <a class="nav-link" href="about.php">about</a>
                                  </li>
                                  <!-- <li class="nav-item">
                                     <a class="nav-link" href="service.html">services</a>
@@ -119,10 +119,10 @@
                                     <a class="nav-link" href="team.html">team </a>
                                  </li> -->
                                  <li class="nav-item">
-                                    <a class="nav-link" href="client.html">Testimonials</a>
+                                    <a class="nav-link" href="testimonial.php">Testimonials</a>
                                  </li>
                                  <li class="nav-item">
-                                    <a class="nav-link" href="contact.html"> contact us </a>
+                                    <a class="nav-link" href="contact.php"> contact us </a>
                                  </li>
                               </ul>
                            </div>
@@ -130,9 +130,9 @@
                      </div>
                      <div class="col-md-3 col-sm-5 d_none">
                         <ul class="sign">
-                           <li><a class="sign_btn" href="#">sign up now</a></li>
+                           <li><a class="sign_btn" href="dash/pages-sign-up.php">sign up now</a></li>
                            <li class="nav-item">
-                              <a class="nav-link" href="contact.html"> Login </a>
+                              <a class="nav-link" href="dash/pages-sign-in.php"> Login </a>
                            </li>
                            <!-- <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li> -->
                         </ul>
@@ -161,7 +161,7 @@
                         protection of their rights and welfare in destination countries like UAE, Saudi Arabia, Jordan, Bahrain, Oman, Qatar, Iraq, 
                         Somalia, Afghanistan and Mali.The aim of TMIS is to track and monitor employees to ensure their safety.</p>
                      <span class="try">contact us for</span>
-                     <a class="read_morea" href="contact.html">More Info <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                     <a class="read_morea" href="contact.php">More Info <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                   </div>
                </div>
                <div class="col-md-12 col-lg-5">
@@ -201,15 +201,15 @@
                   <div class="col-lg-2 col-md-6 col-sm-6">
                      <h3>Menus</h3>
                      <ul class="link_icon">
-                        <li class="active"> <a href="index.html"> Home</a></li>
+                        <li class="active"> <a href="index.php"> Home</a></li>
                         <li>
                            <a href="about.html">
                               </i>About Us
                         </li>
                         <!-- <li> <a href="service.html"> </i>Services</a></li> -->
                         <!-- <li> <a href="team.html"></i>Team</a></li> -->
-                        <li> <a href="client.html"></i>Testimonials</a></li>
-                        <li> <a href="contact.html"></i>Contact us</a></li>
+                        <li> <a href="testimonial.php"></i>Testimonials</a></li>
+                        <li> <a href="contact.php"></i>Contact us</a></li>
                      </ul>
                   </div>
                   <div class="col-lg-2 col-md-6 col-sm-6">
