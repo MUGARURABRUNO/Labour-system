@@ -131,9 +131,9 @@
                      <div class="col-md-3 col-sm-5 d_none">
                         <ul class="sign">
                            <li><a class="sign_btn" href="dash/pages-sign-up.php">sign up now</a></li>
-                           <li class="nav-item">
+                           <!-- <li class="nav-item">
                               <a class="nav-link" href="dash/pages-sign-in.php"> Login </a>
-                           </li>
+                           </li> -->
                            <!-- <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li> -->
                          
                         </ul>
