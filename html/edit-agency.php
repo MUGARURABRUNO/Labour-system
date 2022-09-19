@@ -107,10 +107,10 @@
                            <div class="collapse navbar-collapse" id="navbarsExample04">
                               <ul class="navbar-nav mr-auto">
                                  <li class="nav-item ">
-                                    <a class="nav-link" href="index.php"> Home  </a>
+                                    <a class="nav-link" href="index.html"> Home  </a>
                                  </li>
                                  <li class="nav-item">
-                                    <a class="nav-link" href="about.php">about</a>
+                                    <a class="nav-link" href="about.html">about</a>
                                  </li>
                                  <!-- <li class="nav-item">
                                     <a class="nav-link" href="service.html">services</a>
@@ -120,21 +120,19 @@
                                     <a class="nav-link" href="team.html">team </a>
                                  </li> -->
                                  <li class="nav-item">
-                                    <a class="nav-link" href="testimonial.php">Testimonials</a>
+                                    <a class="nav-link" href="client.html">Testimonials</a>
                                  </li>
                                  <li class="nav-item active">
-                                    <a class="nav-link" href="contact.php"> contact us </a>
+                                    <a class="nav-link" href="contact.html"> contact us </a>
                                  </li>
                               </ul>
                            </div>
                         </nav>
                      </div>
                      <div class="col-md-3 col-sm-5 d_none">
-                     <ul class="sign">
-                           <li><a class="sign_btn" href="dash/pages-sign-up.php">sign up now</a></li>
-                           <li class="nav-item">
-                              <a class="nav-link" href="dash/pages-sign-in.php"> Login </a>
-                           </li>
+                        <ul class="sign">
+                           <li><a class="sign_btn" href="sign-out.php">sign out</a></li>
+                           
                            <!-- <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li> -->
                         </ul>
                      </div>
@@ -152,28 +150,123 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage">
-                     <h2><strong class="yellow">Contact us</strong><br>Share with us</h2>
+                     <h2><strong class="yellow"></strong><br>Edit Agency</h2>
                   </div>
                </div>
             </div>
             <div class="row">
                <div class="col-md-8 offset-md-2">
-                  <form id="post_form" class="contact_form" method="POST">
-                     <div class="row">
-                        <div class="col-md-12 ">
-                           <input class="contact_control" placeholder=" Name" type="text" name="Name"> 
-                        </div>
-                        <div class="col-md-12">
-                           <input class="contact_control" placeholder="Email" type="text" name="email"> 
-                        </div>
-                        
-                        <div class="col-md-12">
-                           <textarea class="textarea" placeholder="Message" type="text" name="Message">Message </textarea>
-                        </div>
-                        <div class="col-md-12">
-                           <input type="submit" class="send_btn" value="Send" name="send">
-                        </div>
-                  </form>
+               <?php 
+    
+    include 'config.php';
+// updating code
+if (isset($_REQUEST['update'])) {
+  // echo "updating successful";
+  $aid=$_REQUEST['update'];
+  $sql_fetch="SELECT * FROM agency WHERE aid='$aid'";
+  $sql_query=mysqli_query($conn, $sql_fetch);
+  $row=mysqli_fetch_assoc($sql_query);
+
+
+  if(isset($_POST['update-record'])){
+  //echo working
+  $aid=$_POST['aid'];
+  $a_name = $_POST['a_name'];
+  $email = $_POST['email'];
+  $address = $_POST['address'];
+  $experience = $_POST['experience'];
+  $image = $_POST['image'];
+  $password = $_POST['password'];
+ 
+
+  
+
+  $sql_insert="UPDATE agency SET `aid`='$aid', `a_name`='$a_name', `email`='$email', `address`='$address', `experience`='$experience', `image`='$image', `password`='$password' WHERE aid='$aid'";
+  $sql_query=mysqli_query($conn,$sql_insert);
+  if ($sql_query==TRUE) {
+    echo " update successful";
+  }else{
+    echo mysqli_error($conn);
+  }
+}
+  ?>
+               <form action="" method="Post" enctype="multipart/form-data">
+										<div class="mb-3">
+												<label class="form-label">Agency Name</label>
+												<input class="form-control form-control-lg" type="text" value="<?php echo $row['a_name']; ?>" name="a_name" />
+											</div>
+											<div class="mb-3">
+												<label class="form-label">Email</label>
+												<input class="form-control form-control-lg" type="email" value="<?php echo $row['email']; ?>" name="email" />
+											</div>
+											<div class="mb-3">
+												<label class="form-label">Agency Address</label>
+												<input class="form-control form-control-lg" type="text" value="<?php echo $row['address']; ?>" name="address" />
+											</div>
+											<div class="mb-3">
+												<label class="form-label">Experience</label>
+												<input class="form-control form-control-lg" type="date"  value="<?php echo $row['experience']; ?>" name="experience" />
+											</div>
+											<div class="mb-3">
+												<label class="form-label">Password</label>
+												<input class="form-control form-control-lg" type="text" value="<?php echo $row['password']; ?>"  name="password" />
+											</div>
+											</div>
+											<div class="text-center mt-3">
+												<button type="submit" name="update-record" class="btn btn-lg btn-primary">Add Agency</button>
+											</div>
+											<div class="text-center mt-3">
+												<a href="index.php" class="btn btn-lg btn-primary">Back</a>
+											</div>
+										</form>
+               <?php
+}   
+    // deleting code
+if (isset($_REQUEST['delete'])){
+    $aid=$_REQUEST['delete'];
+    $sql_delete="DELETE FROM labour WHERE `aid`='$aid'";
+    $sql_query=mysqli_query($conn, $sql_delete);
+    if ($sql_query==TRUE){
+      echo "Deleted successful";
+    }else{
+      echo mysqli_error($conn);
+    }
+  }
+
+// retrieving data
+  $sql_fetch="SELECT * FROM agency";
+  $sql_query=mysqli_query($conn, $sql_fetch);
+    ?>
+<form action="" method="POST" >
+<table>
+    <tr>
+        <th>Agency Id</th>
+        <th>Agency Name</th>
+        <th>Email</th>
+        <th>Agency Address</th>
+        <th>Experience</th>
+        <th>Image</th>
+        <th>Password</th>
+    </tr>
+    <?php 
+  while($rows=mysqli_fetch_assoc($sql_query)){
+  // echo $rows['patientId']."<br>";
+   ?>
+    <tr>
+        <td><?php echo $rows['aid']?></td>
+        <td><?php echo $rows['a_name']?></td>
+        <td><?php echo $rows['email']?></td>
+        <td><?php echo $rows['address']?></td>
+        <td><?php echo $rows['experience']?></td>
+        <td><?php echo $rows['image']?></td>
+        <td><?php echo $rows['password']?></td>
+        <td><a href="?delete=<?php echo $rows['aid']?>">Delete</a></td>
+        <td><a href="?update=<?php echo $rows['aid']?>">Update</a></td>
+    </tr>
+    <?php 
+} ?>
+</table>
+  </form>
                   </div>
                </div>
             </div>
@@ -182,80 +275,17 @@
       <!-- end contact  section -->
       <!--  footer -->
       <footer >
-         <div class="footer">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-12">
-                     <a class="logo2" href="#"><img src="images/tmis.png" alt="#" /></a>
-                  </div>
-                  <div class="col-lg-5 col-md-6 col-sm-6">
-                     <h3>Contact Us</h3>
-                     <ul class="location_icon">
-                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a> Kampala,
-                           <br> 
-                        </li>
-                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>tmis@gmail.com<br></li>
-                        <li><a href="#"><i class="fa fa-volume-control-phone" aria-hidden="true"></i></a>+256 782710288<br>+256 706090938</li>
-                     </ul>
-                     <ul class="social_icon">
-                        <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                        <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li> <a href="#"> <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                        <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
-                     </ul>
-                  </div>
-                  <div class="col-lg-2 col-md-6 col-sm-6">
-                     <h3>Menus</h3>
-                     <ul class="link_icon">
-                        <li class="active"> <a href="index.php"> Home</a></li>
-                        <li>
-                           <a href="about.html">
-                              </i>About Us
-                        </li>
-                        <!-- <li> <a href="service.html"> </i>Services</a></li> -->
-                        <!-- <li> <a href="team.html"></i>Team</a></li> -->
-                        <li> <a href="testimonial.php"></i>Testimonials</a></li>
-                        <li> <a href="contact.php"></i>Contact us</a></li>
-                     </ul>
-                  </div>
-                  <div class="col-lg-2 col-md-6 col-sm-6">
-                     <h3>Services</h3>
-                     <ul class="link_icon">
-                        <li> <a href="#"> Registration </a></li>
-                        <li>
-                           <a href="#">
-                              Monitoring
-                        </li>
-                        <li> <a href="#"> Tracking </a></li>
-                        <li> <a href="#">Reports</a></li>
-                        <!-- <li> <a href="#"> November 25, 2019</a></li> -->
-                     </ul>
-                  </div>
-                  <div class="col-lg-3 col-md-6 col-sm-6">
-                     <h3>Newsletter</h3>
-                     <form id="request" class="main_form">
-                        <div class="row">
-                           <div class="col-md-12 ">
-                              <input class="news" placeholder="Your Email" type="type" name="Your Email">
-                           </div>
-                           <div class="col-md-12">
-                              <button class="send_btn">Send</button>
-                           </div>
-                        </div>
-                     </form>
-                  </div>
-               </div>
-            </div>
+         
             <div class="copyright">
                <div class="container">
                   <div class="row">
                      <div class="col-md-12">
-                        <p>© 2022 All Rights Reserved. TMIS</a></p>
+                        <p>© 2022 All Rights Reserved.<a href="https://html.design/"> TMIS</a></p>
                      </div>
                   </div>
                </div>
             </div>
-         </div>
+         
       </footer>
       <!-- end footer -->
       <!-- Javascript files-->
@@ -268,26 +298,4 @@
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
    </body>
-</html>
-<?php
-include 'config.php';
-
-if (isset($_POST['send'])){
-   
-   $Name = $_POST['Name'];
-   $email = $_POST['email'];
-   $Message = $_POST['Message'];
-      
-      
-    
-   $sql_insert = "INSERT INTO `contact`(`Name`,`email`,`Message`) VALUES ('$Name','$email','$Message')";
-   $sql_query = mysqli_query($conn, $sql_insert);
-   if ($sql_query == TRUE) {
-    echo "successful";
-     
-   } else {
-    echo mysqli_error($conn);
-      }
-    }
-
-?>
+</html> 

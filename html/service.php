@@ -8,7 +8,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>tmis</title>
+      <title>webwing</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -82,15 +82,15 @@
                   <div class="row d_flex">
                      <div class="col-md-4 col-sm-4 d_none">
                         <ul class="conta_icon">
-                           <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i> Call Us : +256 706090938</a> </li>
+                           <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i> Call Us : +01 1234567890</a> </li>
                         </ul>
                      </div>
                      <div class="col-md-4 col-sm-4 " >
-                        <a class="logo" href="#"><img src="images/tmis.png" alt="#"/></a>
+                        <a class="logo" href="#"><img src="images/logo.png" alt="#"/></a>
                      </div>
                      <div class="col-md-4 col-sm-4 d_none">
                         <ul class="conta_icon ">
-                           <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> tmis@gmail.com</a> </li>
+                           <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> demo@gmail.com</a> </li>
                         </ul>
                      </div>
                   </div>
@@ -106,20 +106,20 @@
                            </button>
                            <div class="collapse navbar-collapse" id="navbarsExample04">
                               <ul class="navbar-nav mr-auto">
-                                 <li class="nav-item ">
-                                    <a class="nav-link" href="index.html"> Home </a>
+                                 <li class="nav-item active">
+                                    <a class="nav-link" href="index.html"> Home  </a>
                                  </li>
                                  <li class="nav-item">
                                     <a class="nav-link" href="about.html">about</a>
                                  </li>
-                                 <!-- <li class="nav-item">
+                                 <li class="nav-item">
                                     <a class="nav-link" href="service.html">services</a>
-                                 </li> -->
-                                 <!-- <li class="nav-item">
+                                 </li>
+                                 <li class="nav-item">
                                     <a class="nav-link" href="team.html">team </a>
-                                 </li> -->
-                                 <li class="nav-item active">
-                                    <a class="nav-link" href="client.html">Testimonials</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="client.html">Clients</a>
                                  </li>
                                  <li class="nav-item">
                                     <a class="nav-link" href="contact.html"> contact us </a>
@@ -130,12 +130,8 @@
                      </div>
                      <div class="col-md-3 col-sm-5 d_none">
                         <ul class="sign">
-                           <li><a class="sign_btn" href="dash/pages-sign-up.php">sign up now</a></li>
-                           <li class="nav-item">
-                              <a class="nav-link" href="dash/pages-sign-in.php"> Login </a>
-                           </li>
-                           <!-- <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li> -->
-                         
+                           <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                           <li><a class="sign_btn" href="sign-out.php">sign out</a></li>
                         </ul>
                      </div>
                   </div>
@@ -145,128 +141,118 @@
       </header>
       <!-- end header inner -->
       <!-- end header -->
-      <!-- banner -->
-     
-      <!-- testimonial -->
-      <div id="client"  class="testimonial">
+ 
+      <!-- service section -->
+      <div id="service" class="service">
          <div class="container">
             <div class="row">
-               <div class="col-md-12">
+               <div class="col-md-7">
                   <div class="titlepage">
-                     <h2><strong class="yellow">testimonial</strong><br>What people say</h2>
+                     <h2><strong class="yellow">service</strong><br> WE CAN HELP YOUR business GROW</h2>
                   </div>
                </div>
             </div>
-         </div>
-         <div id="testimo" class="carousel slide testimonial_Carousel " data-ride="carousel">
-            <ol class="carousel-indicators">
-               <li data-target="#testimo" data-slide-to="0" class="active"></li>
-               <li data-target="#testimo" data-slide-to="1"></li>
-               <li data-target="#testimo" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-               <div class="carousel-item active">
-                  <div class="container">
-                     <div class="carousel-caption ">
-                        <div class="row">
-                           <div class="col-md-6 offset-md-3">
-                              <div class="test_box">
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-                                 <i><img src="images/cos.jpg" alt="#"/></i>         <span>Consectetur</span>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
+            <div class="row">
+               <div class="col-md-4 col-sm-6">
+                  <div id="ho_color" class="service_box">
+                     <img src="images/service_icon1.png" alt="#"/>
+                     <h3>DIGITAL marketing</h3>
+                     <p>Lorem Ipsum is simply dummy text of the printing and1500s, </p>
                   </div>
                </div>
-               <div class="carousel-item">
-                  <div class="container">
-                     <div class="carousel-caption">
-                        <div class="row">
-                           <div class="col-md-6 offset-md-3">
-                              <div class="test_box">
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-                                 <i><img src="images/cos.jpg" alt="#"/></i>         <span>Consectetur</span>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
+               <div class="col-md-4 col-sm-6">
+                  <div id="ho_color" class="service_box">
+                     <img src="images/service_icon2.png" alt="#"/>
+                     <h3>FINANCIAL PLANING</h3>
+                     <p>Lorem Ipsum is simply dummy text of the printing and1500s, </p>
                   </div>
                </div>
-               <div class="carousel-item">
-                  <div class="container">
-                     <div class="carousel-caption">
-                        <div class="row">
-                           <div class="col-md-6 offset-md-3">
-                              <div class="test_box">
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-                                 <i><img src="images/cos.jpg" alt="#"/></i>         <span>Consectetur</span>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
+               <div class="col-md-4 col-sm-6">
+                  <div id="ho_color" class="service_box">
+                     <img src="images/service_icon3.png" alt="#"/>
+                     <h3>DIGITAL marketing</h3>
+                     <p>Lorem Ipsum is simply dummy text of the printing and1500s, </p>
                   </div>
+               </div>
+               <div class="col-md-4 col-sm-6">
+                  <div id="ho_color" class="service_box">
+                     <img src="images/service_icon4.png" alt="#"/>
+                     <h3>BUSINESS CONSULTING</h3>
+                     <p>Lorem Ipsum is simply dummy text of the printing and1500s, </p>
+                  </div>
+               </div>
+               <div class="col-md-4 col-sm-6">
+                  <div id="ho_color" class="service_box">
+                     <img src="images/service_icon5.png" alt="#"/>
+                     <h3>MARKETING RESEARCH</h3>
+                     <p>Lorem Ipsum is simply dummy text of the printing and1500s, </p>
+                  </div>
+               </div>
+               <div class="col-md-4 col-sm-6">
+                  <div id="ho_color" class="service_box">
+                     <img src="images/service_icon6.png" alt="#"/>
+                     <h3>UX RESEARCH</h3>
+                     <p>Lorem Ipsum is simply dummy text of the printing and1500s, </p>
+                  </div>
+               </div>
+               <div class="col-md-12">
+                  <a class="read_more" href="#">Read More</a>
                </div>
             </div>
-            <a class="carousel-control-prev" href="#testimo" role="button" data-slide="prev">
-            <i class="fa fa-chevron-left" aria-hidden="true"></i>
-            </a>
-            <a class="carousel-control-next" href="#testimo" role="button" data-slide="next">
-            <i class="fa fa-chevron-right" aria-hidden="true"></i>
-            </a>
          </div>
       </div>
-      <!-- end testimonial -->
-    
+      </div>
+      <!-- service section -->
+
       <!--  footer -->
       <footer >
          <div class="footer">
             <div class="container">
                <div class="row">
                   <div class="col-md-12">
-                     <a class="logo2" href="#"><img src="images/tmis.png" alt="#" /></a>
+                     <a class="logo2" href="#"><img src="images/loogo2.png" alt="#"/></a>
                   </div>
                   <div class="col-lg-5 col-md-6 col-sm-6">
                      <h3>Contact Us</h3>
                      <ul class="location_icon">
-                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a> Kampala,
-                           <br> 
+                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a> London 145
+                           <br> United Kingdom 
                         </li>
-                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>tmis@gmail.com<br></li>
-                        <li><a href="#"><i class="fa fa-volume-control-phone" aria-hidden="true"></i></a>+256 782710288<br>+256 706090938</li>
+                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>demo@gmail.com<br> demo@gmail.com</li>
+                        <li><a href="#"><i class="fa fa-volume-control-phone" aria-hidden="true"></i></a>+01 1234567890<br>+01 1234567889</li>
                      </ul>
                      <ul class="social_icon">
                         <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
                         <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li> <a href="#"> <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li> <a href="#">   <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                         <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
                      </ul>
                   </div>
                   <div class="col-lg-2 col-md-6 col-sm-6">
                      <h3>Menus</h3>
                      <ul class="link_icon">
-                        <li class="active"> <a href="index.html"> Home</a></li>
+                        <li > <a href="index.html"> Home</a></li>
                         <li>
                            <a href="about.html">
-                              </i>About Us
+                              </i>About Us  
                         </li>
-                        <!-- <li> <a href="service.html"> </i>Services</a></li> -->
-                        <!-- <li> <a href="team.html"></i>Team</a></li> -->
-                        <li> <a href="client.html"></i>Testimonials</a></li>
+                        <li class="active"> <a href="service.html"> </i>Services</a></li>
+                         <li> <a href="team.html"></i>Team</a></li>
+                        <li> <a href="client.html"></i>Clients</a></li>
                         <li> <a href="contact.html"></i>Contact us</a></li>
                      </ul>
                   </div>
                   <div class="col-lg-2 col-md-6 col-sm-6">
-                     <h3>Services</h3>
+                     <h3>Recent Post</h3>
                      <ul class="link_icon">
-                        <li> <a href="#"> Registration </a></li>
+                        <li > <a href="#"> Participate in staff </a></li>
                         <li>
                            <a href="#">
-                              Monitoring
+                              meetings manage 
                         </li>
-                        <li> <a href="#"> Tracking </a></li>
-                        <li> <a href="#">Reports</a></li>
-                        <!-- <li> <a href="#"> November 25, 2019</a></li> -->
+                        <li> <a href="#"> dedicated to </a></li>
+                        <li> <a href="#"> marketing</a></li>
+                        <li> <a href="#"> November 25, 2019</a></li>
                      </ul>
                   </div>
                   <div class="col-lg-3 col-md-6 col-sm-6">
@@ -274,7 +260,7 @@
                      <form id="request" class="main_form">
                         <div class="row">
                            <div class="col-md-12 ">
-                              <input class="news" placeholder="Your Email" type="type" name="Your Email">
+                              <input class="news" placeholder="Your Email" type="type" name="Your Email"> 
                            </div>
                            <div class="col-md-12">
                               <button class="send_btn">Send</button>
@@ -288,7 +274,7 @@
                <div class="container">
                   <div class="row">
                      <div class="col-md-12">
-                        <p>© 2022 All Rights Reserved.<a href="https://html.design/"> TMIS</a></p>
+                        <p>© 2019 All Rights Reserved.<a href="https://html.design/"> Free  html Templates</a></p>
                      </div>
                   </div>
                </div>

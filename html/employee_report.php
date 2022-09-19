@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -33,9 +34,7 @@
    <!-- body -->
    <body class="main-layout">
       <!-- loader  -->
-      <div class="loader_bg">
-         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
-      </div>
+      
       <!-- end loader -->
       <!-- header -->
       <header>
@@ -112,13 +111,6 @@
                                  <li class="nav-item">
                                     <a class="nav-link" href="about.php">about</a>
                                  </li>
-                                 <!-- <li class="nav-item">
-                                    <a class="nav-link" href="service.html">services</a>
-                                 </li> -->
-                                 <!-- <li class="nav-item">
-                               
-                                    <a class="nav-link" href="team.html">team </a>
-                                 </li> -->
                                  <li class="nav-item">
                                     <a class="nav-link" href="testimonial.php">Testimonials</a>
                                  </li>
@@ -131,11 +123,7 @@
                      </div>
                      <div class="col-md-3 col-sm-5 d_none">
                      <ul class="sign">
-                           <li><a class="sign_btn" href="dash/pages-sign-up.php">sign up now</a></li>
-                           <li class="nav-item">
-                              <a class="nav-link" href="dash/pages-sign-in.php"> Login </a>
-                           </li>
-                           <!-- <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li> -->
+                           <li><a class="sign_btn" href="sign-out.php">Sigin Out</a></li>
                         </ul>
                      </div>
                   </div>
@@ -143,109 +131,99 @@
             </div>
          </div>
       </header>
-      <!-- end header inner -->
-      <!-- end header -->
- 
-      <!-- contact  section -->
+     
+    
       <div id="contact" class="contact ">
          <div class="container">
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage">
-                     <h2><strong class="yellow">Contact us</strong><br>Share with us</h2>
+                     <h2><strong class="yellow">View Employee</strong><br>Employee Report</h2>
                   </div>
                </div>
             </div>
-            <div class="row">
-               <div class="col-md-8 offset-md-2">
-                  <form id="post_form" class="contact_form" method="POST">
-                     <div class="row">
-                        <div class="col-md-12 ">
-                           <input class="contact_control" placeholder=" Name" type="text" name="Name"> 
-                        </div>
-                        <div class="col-md-12">
-                           <input class="contact_control" placeholder="Email" type="text" name="email"> 
-                        </div>
-                        
-                        <div class="col-md-12">
-                           <textarea class="textarea" placeholder="Message" type="text" name="Message">Message </textarea>
-                        </div>
-                        <div class="col-md-12">
-                           <input type="submit" class="send_btn" value="Send" name="send">
-                        </div>
-                  </form>
-                  </div>
+
+            <?php 
+            if(isset($_GET['employee'])){
+               $eid = $_GET['eid'];
+
+             $sql_fetch="SELECT * FROM employee where eid='".$_SESSION['eid']."'";
+             $sql_query=mysqli_query($conn, $sql_fetch);
+             $rows=mysqli_fetch_assoc($sql_query);
+            
+            ?>
+            
+                  <table border="1">
+                     <tr> 
+                     <td>Employee Id</td>
+                     <td><?php echo $rows['eid']?></td>
+                  </tr>
+                     <tr>
+                     <td>First Name</td>
+                     <td><?php echo $rows['firstName']?></td>
+                  </tr>
+
+                  <tr>
+                     <td>Last Name</td>
+                     <td><?php echo $rows['lastName']?></td>
+                  </tr>
+
+                     <tr>
+                     <td>Nin</td>
+                     <td><?php echo $rows['nin']?></td>
+                  </tr>
+
+                     <tr>
+                     <td>Age</td>
+                     <td><?php echo $rows['age']?></td>
+                  </tr>
+                  <tr>
+                     <td>Contact</td>
+                     <td><?php echo $rows['contact']?></td>
+                  </tr>
+
+                     <tr>
+                     <td>Address</td>
+                     <td><?php echo $rows['address']?></td>
+                  </tr>
+
+                     <tr>
+                     <td>Email</td>
+                     <td><?php echo $rows['email']?></td>
+                  </tr>
+                     <tr>
+                     <td>Next Of Kin</td>
+                     <td><?php echo $rows['next_of_kin']?></td>
+                  </tr>
+                  <tr>
+                     <td>Employer</td>
+                     <td><?php echo $rows['employer']?></td>
+                  </tr>
+                  <tr>
+                     <td>Job</td>
+                     <td><?php echo $rows['job']?></td>
+                  </tr>
+                  <tr>
+                     <td>Contract</td>
+                     <td><?php echo $rows['contract']?></td>
+                  </tr>
+                  <tr>
+                     <td>Salary</td>
+                     <td><?php echo $rows['salary']?></td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <button onclick="window.print()">PRINT</button>
+                     </td>
+                  </tr>
+                  </table>
                </div>
+               <?php
+               }
+               ?>
             </div>
-         </div>
-      </div>
-      <!-- end contact  section -->
-      <!--  footer -->
+    
       <footer >
-         <div class="footer">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-12">
-                     <a class="logo2" href="#"><img src="images/tmis.png" alt="#" /></a>
-                  </div>
-                  <div class="col-lg-5 col-md-6 col-sm-6">
-                     <h3>Contact Us</h3>
-                     <ul class="location_icon">
-                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a> Kampala,
-                           <br> 
-                        </li>
-                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>tmis@gmail.com<br></li>
-                        <li><a href="#"><i class="fa fa-volume-control-phone" aria-hidden="true"></i></a>+256 782710288<br>+256 706090938</li>
-                     </ul>
-                     <ul class="social_icon">
-                        <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                        <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li> <a href="#"> <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                        <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
-                     </ul>
-                  </div>
-                  <div class="col-lg-2 col-md-6 col-sm-6">
-                     <h3>Menus</h3>
-                     <ul class="link_icon">
-                        <li class="active"> <a href="index.php"> Home</a></li>
-                        <li>
-                           <a href="about.html">
-                              </i>About Us
-                        </li>
-                        <!-- <li> <a href="service.html"> </i>Services</a></li> -->
-                        <!-- <li> <a href="team.html"></i>Team</a></li> -->
-                        <li> <a href="testimonial.php"></i>Testimonials</a></li>
-                        <li> <a href="contact.php"></i>Contact us</a></li>
-                     </ul>
-                  </div>
-                  <div class="col-lg-2 col-md-6 col-sm-6">
-                     <h3>Services</h3>
-                     <ul class="link_icon">
-                        <li> <a href="#"> Registration </a></li>
-                        <li>
-                           <a href="#">
-                              Monitoring
-                        </li>
-                        <li> <a href="#"> Tracking </a></li>
-                        <li> <a href="#">Reports</a></li>
-                        <!-- <li> <a href="#"> November 25, 2019</a></li> -->
-                     </ul>
-                  </div>
-                  <div class="col-lg-3 col-md-6 col-sm-6">
-                     <h3>Newsletter</h3>
-                     <form id="request" class="main_form">
-                        <div class="row">
-                           <div class="col-md-12 ">
-                              <input class="news" placeholder="Your Email" type="type" name="Your Email">
-                           </div>
-                           <div class="col-md-12">
-                              <button class="send_btn">Send</button>
-                           </div>
-                        </div>
-                     </form>
-                  </div>
-               </div>
-            </div>
             <div class="copyright">
                <div class="container">
                   <div class="row">
@@ -255,7 +233,6 @@
                   </div>
                </div>
             </div>
-         </div>
       </footer>
       <!-- end footer -->
       <!-- Javascript files-->
@@ -269,25 +246,3 @@
       <script src="js/custom.js"></script>
    </body>
 </html>
-<?php
-include 'config.php';
-
-if (isset($_POST['send'])){
-   
-   $Name = $_POST['Name'];
-   $email = $_POST['email'];
-   $Message = $_POST['Message'];
-      
-      
-    
-   $sql_insert = "INSERT INTO `contact`(`Name`,`email`,`Message`) VALUES ('$Name','$email','$Message')";
-   $sql_query = mysqli_query($conn, $sql_insert);
-   if ($sql_query == TRUE) {
-    echo "successful";
-     
-   } else {
-    echo mysqli_error($conn);
-      }
-    }
-
-?>

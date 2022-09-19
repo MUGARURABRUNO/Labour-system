@@ -102,38 +102,37 @@
                      <div class="col-md-9 col-sm-7">
                         <nav class="navigation navbar navbar-expand-md navbar-dark ">
                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-                              <span class="navbar-toggler-icon"></span>
+                           <span class="navbar-toggler-icon"></span>
                            </button>
                            <div class="collapse navbar-collapse" id="navbarsExample04">
                               <ul class="navbar-nav mr-auto">
-                                 <li class="nav-item active">
-                                    <a class="nav-link" href="index.html"> Home </a>
+                                 <li class="nav-item ">
+                                    <a class="nav-link" href="index.php"> Home  </a>
                                  </li>
                                  <li class="nav-item">
-                                    <a class="nav-link" href="about.html">about</a>
+                                    <a class="nav-link" href="about.php">about</a>
                                  </li>
                                  <!-- <li class="nav-item">
                                     <a class="nav-link" href="service.html">services</a>
                                  </li> -->
                                  <!-- <li class="nav-item">
+                               
                                     <a class="nav-link" href="team.html">team </a>
                                  </li> -->
                                  <li class="nav-item">
-                                    <a class="nav-link" href="client.html">Testimonials</a>
+                                    <a class="nav-link" href="testimonial.php">Testimonials</a>
                                  </li>
-                                 <li class="nav-item">
-                                    <a class="nav-link" href="contact.html"> contact us </a>
+                                 <li class="nav-item active">
+                                    <a class="nav-link" href="contact.php"> contact us </a>
                                  </li>
                               </ul>
                            </div>
                         </nav>
                      </div>
                      <div class="col-md-3 col-sm-5 d_none">
-                        <ul class="sign">
-                           <li><a class="sign_btn" href="#">sign up now</a></li>
-                           <li class="nav-item">
-                              <a class="nav-link" href="contact.html"> Login </a>
-                           </li>
+                     <ul class="sign">
+                           <li><a class="sign_btn" href="sign-out.php">sign out</a></li>
+                           
                            <!-- <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li> -->
                         </ul>
                      </div>
@@ -144,102 +143,75 @@
       </header>
       <!-- end header inner -->
       <!-- end header -->
-     
-      <!-- about section -->
-      <div id="about" class="about">
-         <div class="container-fluid">
+ 
+      <!-- contact  section -->
+      <div id="contact" class="contact ">
+         <div class="container">
             <div class="row">
-               <div class="col-md-12 col-lg-7">
-                  <div class="about_box">
-                     <div class="titlepage">
-                        <h2><strong class="yellow">About US</strong><br> Promoting rights and Enhancing protection of employees abroad</h2>
-                     </div>
-                     <!-- <h3>EVERYTHING YOU NEED IN ONE SOLUTION</h3> -->
-                     <!-- <span>HELP YOUR NEXT CAREER MOVE MORE SMOOTHER AND <br> MORE EFFICIENT</span> -->
-                     <p>Labor Externalization is a Government of Uganda strategic initiative intended to facilitate 
-                        recruitment of Ugandan migrant workers to decent employment opportunities and promote the 
-                        protection of their rights and welfare in destination countries like UAE, Saudi Arabia, Jordan, Bahrain, Oman, Qatar, Iraq, 
-                        Somalia, Afghanistan and Mali.The aim of TMIS is to track and monitor employees to ensure their safety.</p>
-                     <span class="try">contact us for</span>
-                     <a class="read_morea" href="contact.html">More Info <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2><strong class="yellow">Contact us</strong><br>Share with us</h2>
                   </div>
                </div>
-               <div class="col-md-12 col-lg-5">
-                  <div class="about_img">
-                     <figure><img src="images/about_img2.jpg" alt="#"/></figure>
+            </div>
+            <div class="row">
+               <div class="col-md-8 offset-md-2">
+               <?php 
+    
+    include 'config.php';
+ 
+    // deleting code
+if (isset($_REQUEST['delete'])){
+    $contactId=$_REQUEST['delete'];
+    $sql_delete="DELETE FROM contact WHERE `contactId`='$contactId'";
+    $sql_query=mysqli_query($conn, $sql_delete);
+    if ($sql_query==TRUE){
+      echo "Deleted successful";
+    }else{
+      echo mysqli_error($conn);
+    }
+
+  }
+
+  // retrieving data
+  $sql_fetch="SELECT * FROM contact";
+  $sql_query=mysqli_query($conn, $sql_fetch);
+    ?>
+	<form action="" method="POST" >
+<table>
+    <tr>
+        <th>Contact Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Message</th>
+        
+       
+    </tr>
+    <?php 
+  while($rows=mysqli_fetch_assoc($sql_query)){
+  // echo $rows['patientId']."<br>";
+   ?>
+    <tr>
+        <td><?php echo $rows['contactId']?></td>
+        <td><?php echo $rows['Name']?></td>
+        <td><?php echo $rows['email']?></td>
+        <td><?php echo $rows['Message']?></td>
+        <td><a href="?delete=<?php echo $rows['contactId']?>">Delete</a></td>
+        
+    </tr>
+    <?php 
+} ?>
+</table>
+  </form>
                   </div>
                </div>
             </div>
          </div>
       </div>
-      <!-- about section -->
-     
+      <!-- end contact  section -->
       <!--  footer -->
-      <footer>
-         <div class="footer">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-12">
-                     <a class="logo2" href="#"><img src="images/tmis.png" alt="#" /></a>
-                  </div>
-                  <div class="col-lg-5 col-md-6 col-sm-6">
-                     <h3>Contact Us</h3>
-                     <ul class="location_icon">
-                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a> Kampala,
-                           <br> 
-                        </li>
-                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>tmis@gmail.com<br></li>
-                        <li><a href="#"><i class="fa fa-volume-control-phone" aria-hidden="true"></i></a>+256 782710288<br>+256 706090938</li>
-                     </ul>
-                     <ul class="social_icon">
-                        <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                        <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li> <a href="#"> <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                        <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
-                     </ul>
-                  </div>
-                  <div class="col-lg-2 col-md-6 col-sm-6">
-                     <h3>Menus</h3>
-                     <ul class="link_icon">
-                        <li class="active"> <a href="index.html"> Home</a></li>
-                        <li>
-                           <a href="about.html">
-                              </i>About Us
-                        </li>
-                        <!-- <li> <a href="service.html"> </i>Services</a></li> -->
-                        <!-- <li> <a href="team.html"></i>Team</a></li> -->
-                        <li> <a href="client.html"></i>Testimonials</a></li>
-                        <li> <a href="contact.html"></i>Contact us</a></li>
-                     </ul>
-                  </div>
-                  <div class="col-lg-2 col-md-6 col-sm-6">
-                     <h3>Services</h3>
-                     <ul class="link_icon">
-                        <li> <a href="#"> Registration </a></li>
-                        <li>
-                           <a href="#">
-                              Monitoring
-                        </li>
-                        <li> <a href="#"> Tracking </a></li>
-                        <li> <a href="#">Reports</a></li>
-                        <!-- <li> <a href="#"> November 25, 2019</a></li> -->
-                     </ul>
-                  </div>
-                  <div class="col-lg-3 col-md-6 col-sm-6">
-                     <h3>Newsletter</h3>
-                     <form id="request" class="main_form">
-                        <div class="row">
-                           <div class="col-md-12 ">
-                              <input class="news" placeholder="Your Email" type="type" name="Your Email">
-                           </div>
-                           <div class="col-md-12">
-                              <button class="send_btn">Send</button>
-                           </div>
-                        </div>
-                     </form>
-                  </div>
-               </div>
-            </div>
+      <footer >
+         
             <div class="copyright">
                <div class="container">
                   <div class="row">
@@ -249,7 +221,7 @@
                   </div>
                </div>
             </div>
-         </div>
+      
       </footer>
       <!-- end footer -->
       <!-- Javascript files-->

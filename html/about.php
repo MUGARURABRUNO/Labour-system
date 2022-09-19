@@ -29,51 +29,6 @@
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-
-      <!-- <style>
-          .box {
- 	display: flex;
- 	align-items: flex-start;
- 	background: #fff;
- 	height: 100vh;
- 	overflow: hidden;
- 	position: relative;
- }
- .box .single-box img {
- 	position: absolute;
- 	min-width: 100%;
- 	min-height: 100%;
- 	height: auto;
- 	background: #000;
- 	-webkit-backface-visibility: hidden;
- 	backface-visibility: hidden;
- 	opacity: 0;
- 	transform: scale(1.5) rotate(15deg);
- 	-webkit-animation: animate 32s infinite;
- 	animation: animate 32s infinite;
- }
- .box .single-box:nth-child(3) img {
- 	-webkit-animation-delay: 8s;
- 	animation-delay: 8s;
- }
- .box .single-box:nth-child(2) img {
- 	-webkit-animation-delay: 16s;
- 	animation-delay: 16s;
- }
- .box .single-box:nth-child(1) img {
- 	-webkit-animation-delay: 24s;
- 	animation-delay: 24s;
- }
- @keyframes animate {
- 	25% {
- 		opacity: 1;
- 		transform: scale(1) rotate(0);
- 	}
- 	40% {
- 		opacity: 0;
- 	}
- }
-      </style> -->
    </head>
    <!-- body -->
    <body class="main-layout">
@@ -176,9 +131,9 @@
                      <div class="col-md-3 col-sm-5 d_none">
                         <ul class="sign">
                            <li><a class="sign_btn" href="dash/pages-sign-up.php">sign up now</a></li>
-                           <!-- <li class="nav-item">
+                           <li class="nav-item">
                               <a class="nav-link" href="dash/pages-sign-in.php"> Login </a>
-                           </li> -->
+                           </li>
                            <!-- <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li> -->
                         </ul>
                      </div>
@@ -211,14 +166,8 @@
                </div>
                <div class="col-md-12 col-lg-5">
                   <div class="about_img">
-                     <figure><img src="images/crop.png" alt="#"/></figure>
-                     <!-- <div class="wrapper box">
-		<div class="single-box"><img alt="" src="Labour-system/html/crop.png"></div>
-		<div class="single-box"><img alt="" src="Premier.jpg"></div>
-		<div class="single-box"><img alt="" src="defohr_logo.png"></div>
-		<div class="single-box"><img alt="" src="loho.jpg"></div>
-	</div>
-                  </div> -->
+                     <figure><img src="images/about_img2.jpg" alt="#"/></figure>
+                  </div>
                </div>
             </div>
          </div>

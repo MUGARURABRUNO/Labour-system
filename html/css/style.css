@@ -52,7 +52,7 @@ body {
 }
 
 a {
-     color: #1f1f1f;
+     color: hwb(0 12% 88%);
      text-decoration: none !important;
      outline: none !important;
      -webkit-transition: all .3s ease-in-out;
@@ -278,6 +278,7 @@ ul.btn li:last-child {
 
 .header {
      width: 100%;
+
 }
 
 .header_to {
@@ -1168,6 +1169,17 @@ ul.social_icont li a {
 
 /** end testimonial section **/
 
+/** start help desk **/
+.inner-card{
+     border: #003471 ipx;
+     margin-top: 30px;
+}
+
+div a span .help-btn{
+     margin-left: 1000px;
+}
+/** end help desk **/
+
 
 /** contact  section **/
 
@@ -1252,7 +1264,7 @@ ul.social_icont li a {
 }
 
 .logo2 {
-     float: left;
+     float: center;
 }
 
 .footer h3 {
@@ -1415,6 +1427,23 @@ ul.img_icon li {
 .copyright a:hover {
      color: #fff;
 }
+
+.success {
+     background: #D4EDDA;
+     color: #40754C;
+     padding: 10px;
+     width: 95%;
+     border-radius: 5px;
+     margin: 20px auto;
+   }
+   .error {
+     background: #F2DEDE;
+     color: #A94442;
+     padding: 10px;
+     width: 95%;
+     border-radius: 5px;
+     margin: 20px auto;
+   }
 
 
 /** end footer **/

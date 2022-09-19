@@ -131,10 +131,8 @@
                      </div>
                      <div class="col-md-3 col-sm-5 d_none">
                      <ul class="sign">
-                           <li><a class="sign_btn" href="dash/pages-sign-up.php">sign up now</a></li>
-                           <li class="nav-item">
-                              <a class="nav-link" href="dash/pages-sign-in.php"> Login </a>
-                           </li>
+                           <li><a class="sign_btn" href="sign-out.php">sign out</a></li>
+                           
                            <!-- <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li> -->
                         </ul>
                      </div>
@@ -152,28 +150,77 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage">
-                     <h2><strong class="yellow">Contact us</strong><br>Share with us</h2>
+                     <h2><strong class="yellow"></strong><br>Add new Employee</h2>
                   </div>
                </div>
             </div>
             <div class="row">
                <div class="col-md-8 offset-md-2">
-                  <form id="post_form" class="contact_form" method="POST">
-                     <div class="row">
-                        <div class="col-md-12 ">
-                           <input class="contact_control" placeholder=" Name" type="text" name="Name"> 
-                        </div>
-                        <div class="col-md-12">
-                           <input class="contact_control" placeholder="Email" type="text" name="email"> 
-                        </div>
-                        
-                        <div class="col-md-12">
-                           <textarea class="textarea" placeholder="Message" type="text" name="Message">Message </textarea>
-                        </div>
-                        <div class="col-md-12">
-                           <input type="submit" class="send_btn" value="Send" name="send">
-                        </div>
-                  </form>
+			   <form action="" method="Post">
+			                                <div class="mb-3">
+												<label class="form-label"> photo</label>
+												<input class="form-control form-control-lg" type="file" name="imaage_link" placeholder="Enter project name" />
+											</div>
+											<div class="mb-3">
+												<label class="form-label"> Employee First Name</label>
+												<input class="form-control form-control-lg" type="text" name="firstName" placeholder="Enter project name" />
+											</div>
+											<div class="mb-3">
+												<label class="form-label">Employee last Name</label>
+												<input class="form-control form-control-lg" type="text" name="lastName" placeholder="Enter company name"/>
+											</div>
+											<div class="mb-3">
+												<label class="form-label">Employee National Identification Number</label>
+												<input class="form-control form-control-lg" type="text" name="nin" placeholder="National Identification Number.." />
+											</div>
+											<div class="mb-3">
+												<label class="form-label">Date Of Birth</label>
+												<input class="form-control form-control-lg" type="date"  name="age" required />
+											</div>
+											<div class="mb-3">
+												<label class="form-label">Contact</label>
+												<input class="form-control form-control-lg" type="text"  name="contact" placeholder="Telphone Number" required />
+											</div>
+											<div class="mb-3">
+												<label class="form-label">Address</label>
+												<input class="form-control form-control-lg" type="text"  name="address" placeholder="your current address" required />
+											</div>
+											<div class="mb-3">
+												<label class="form-label">Email</label>
+												<input class="form-control form-control-lg" type="text" name="email" placeholder="Your email.." required/>
+											</div>
+											<div class="mb-3">
+												<label class="form-label">Next Of kin</label>
+												<input class="form-control form-control-lg" type="text"  name="next_of_kin" placeholder="Next of Kin .." required />
+											</div>
+											<div class="mb-3">
+												<label class="form-label">Employer</label>
+												<input class="form-control form-control-lg" type="text"  name="employer" placeholder="Employer Information.." required/>
+											</div>
+											<div class="mb-3">
+												<label class="form-label">Job</label>
+												<select class="form-control form-control-lg" name="job" required>
+												<option value="Cleaner">Cleaner</option>
+                                                <option value="Medical">Medical</option>
+                                                <option value="Cargo lifter">Cargo Lifter</option>
+                                                </select>
+											</div>
+											<div class="mb-3">
+												<label class="form-label">Contract in Years</label>
+												<input class="form-control form-control-lg" type="text"  name="contract" placeholder="Enter contract in years.." required/>
+											</div>
+											<div class="mb-3">
+												<label class="form-label">Salary in Shs</label>
+												<input class="form-control form-control-lg" type="text" name="salary" placeholder="Enter Salary for Employee.." required/>
+											</div>
+											<div class="text-center mt-3">
+												<!-- <a href="index.html" class="btn btn-lg btn-primary">Sign up</a> -->
+												<button type="submit" name="ADDEMPLOYEE" class="btn btn-lg btn-primary">Add Employee</button>
+											</div>
+											<div class="text-center mt-3">
+												<a href="index.php" class="btn btn-lg btn-primary">Back</a>
+											</div>
+										</form>
                   </div>
                </div>
             </div>
@@ -182,70 +229,7 @@
       <!-- end contact  section -->
       <!--  footer -->
       <footer >
-         <div class="footer">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-12">
-                     <a class="logo2" href="#"><img src="images/tmis.png" alt="#" /></a>
-                  </div>
-                  <div class="col-lg-5 col-md-6 col-sm-6">
-                     <h3>Contact Us</h3>
-                     <ul class="location_icon">
-                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a> Kampala,
-                           <br> 
-                        </li>
-                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>tmis@gmail.com<br></li>
-                        <li><a href="#"><i class="fa fa-volume-control-phone" aria-hidden="true"></i></a>+256 782710288<br>+256 706090938</li>
-                     </ul>
-                     <ul class="social_icon">
-                        <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                        <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li> <a href="#"> <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                        <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
-                     </ul>
-                  </div>
-                  <div class="col-lg-2 col-md-6 col-sm-6">
-                     <h3>Menus</h3>
-                     <ul class="link_icon">
-                        <li class="active"> <a href="index.php"> Home</a></li>
-                        <li>
-                           <a href="about.html">
-                              </i>About Us
-                        </li>
-                        <!-- <li> <a href="service.html"> </i>Services</a></li> -->
-                        <!-- <li> <a href="team.html"></i>Team</a></li> -->
-                        <li> <a href="testimonial.php"></i>Testimonials</a></li>
-                        <li> <a href="contact.php"></i>Contact us</a></li>
-                     </ul>
-                  </div>
-                  <div class="col-lg-2 col-md-6 col-sm-6">
-                     <h3>Services</h3>
-                     <ul class="link_icon">
-                        <li> <a href="#"> Registration </a></li>
-                        <li>
-                           <a href="#">
-                              Monitoring
-                        </li>
-                        <li> <a href="#"> Tracking </a></li>
-                        <li> <a href="#">Reports</a></li>
-                        <!-- <li> <a href="#"> November 25, 2019</a></li> -->
-                     </ul>
-                  </div>
-                  <div class="col-lg-3 col-md-6 col-sm-6">
-                     <h3>Newsletter</h3>
-                     <form id="request" class="main_form">
-                        <div class="row">
-                           <div class="col-md-12 ">
-                              <input class="news" placeholder="Your Email" type="type" name="Your Email">
-                           </div>
-                           <div class="col-md-12">
-                              <button class="send_btn">Send</button>
-                           </div>
-                        </div>
-                     </form>
-                  </div>
-               </div>
-            </div>
+         
             <div class="copyright">
                <div class="container">
                   <div class="row">
@@ -255,7 +239,7 @@
                   </div>
                </div>
             </div>
-         </div>
+      
       </footer>
       <!-- end footer -->
       <!-- Javascript files-->
@@ -270,24 +254,34 @@
    </body>
 </html>
 <?php
+
 include 'config.php';
 
-if (isset($_POST['send'])){
-   
-   $Name = $_POST['Name'];
-   $email = $_POST['email'];
-   $Message = $_POST['Message'];
-      
-      
-    
-   $sql_insert = "INSERT INTO `contact`(`Name`,`email`,`Message`) VALUES ('$Name','$email','$Message')";
-   $sql_query = mysqli_query($conn, $sql_insert);
-   if ($sql_query == TRUE) {
-    echo "successful";
-     
-   } else {
-    echo mysqli_error($conn);
-      }
-    }
+ if (isset($_POST['ADDEMPLOYEE'])) {
+	 
+  $firstName = $_POST['firstName'];
+  $lastName = $_POST['lastName'];
+  $nin = $_POST['nin'];
+  $age = $_POST['age'];
+  $contact = $_POST['contact'];
+  $address = $_POST['address'];
+  $email = $_POST['email'];
+  $next_of_kin = $_POST['next_of_kin'];
+  $employer = $_POST['employer'];
+  $job = $_POST['job'];
+  $contract = $_POST['contract'];
+  $salary = $_POST['salary'];
+  
 
+  $sql_insert = "INSERT INTO `employee`(`firstName`,`lastName`,`nin`,`age`,`contact`,`address`,`email`,`next_of_kin`,`employer`,`job`,`contract`,`salary`) VALUES ('$firstName','$lastName','$nin','$age','$contact','$address','$email','$next_of_kin','$employer','$job','$contract','$salary')";
+  $sql_query = mysqli_query($conn, $sql_insert);
+  if ($sql_query == TRUE) {
+    echo "successful";
+    // header('location: pages-clients.html');
+  } else {
+    echo mysqli_error($conn);
+  }
+}
+// 
+// 
 ?>

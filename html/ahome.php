@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -109,33 +110,46 @@
                         <div class="collapse navbar-collapse" id="navbarsExample04">
                            <ul class="navbar-nav mr-auto">
                               <li class="nav-item active">
-                                 <a class="nav-link" href="index.html"> Home </a>
+                                 <a class="nav-link" href="index.php"> Home </a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="about.html">about</a>
+                                 <a class="nav-link" href="about.php">about</a>
                               </li>
                               <!-- <li class="nav-item">
                                  <a class="nav-link" href="service.html">services</a>
                               </li> -->
-                              <li class="nav-item">
+                              <!-- <li class="nav-item">
                                  <a class="nav-link" href="team.html">team </a>
+                              </li> -->
+                              <li class="nav-item">
+                                 <a class="nav-link" href="testimonial.php">Testimonials</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="client.html">Testimonials</a>
+                                 <a class="nav-link" href="contact.php"> contact us </a>
                               </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="contact.html"> contact us </a>
-                              </li>
+                              <div class="dropdown show">
+                                    <a class="nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Services
+                                    </a>
+
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <a class="dropdown-item" href="new-employee.php">Add Employee</a>
+                                        <a class="dropdown-item" href="new-agency.php">Add Agency</a>
+                                        <a class="dropdown-item" href="edit-employee.php">Edit Employee</a>
+                                        <a class="dropdown-item" href="edit-agency.php">Edit Agency</a>
+                                        <a class="dropdown-item" href="message.php">Messages</a>
+                                        
+                                    </div>
+                                </div>
+                              
                            </ul>
                         </div>
                      </nav>
                   </div>
                   <div class="col-md-3 col-sm-5 d_none">
                      <ul class="sign">
-                        <li><a class="sign_btn" href="dash/pages-sign-up.php">sign up now</a></li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="dash\pages-sign-in.php"> Login </a>
-                        </li>
+                        <li><a class="sign_btn" href="sign-out.php">sign out</a></li>
+                        
                         <!-- <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li> -->
                       
                      </ul>
@@ -181,7 +195,7 @@
                   <!-- <span>HELP YOUR NEXT CAREER MOVE MORE SMOOTHER AND <br> MORE EFFICIENT</span>
                   <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of usingt</p>
                   <span class="try">TRY ONLINE CV BUILDER FOR Free</span> -->
-                  <a class="read_morea" href="about.html">Read More <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                  <a class="read_morea" href="about.php">Read More <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                   <h3>In conjuction with ministry of labour, gender and social development</h3>
            
                </div>
@@ -776,15 +790,15 @@
                <div class="col-lg-2 col-md-6 col-sm-6">
                   <h3>Menus</h3>
                   <ul class="link_icon">
-                     <li class="active"> <a href="index.html"> Home</a></li>
+                     <li class="active"> <a href="index.php"> Home</a></li>
                      <li>
-                        <a href="about.html">
+                        <a href="about.php">
                            </i>About Us
                      </li>
                      <!-- <li> <a href="service.html"> </i>Services</a></li> -->
                      <!-- <li> <a href="team.html"></i>Team</a></li> -->
-                     <li> <a href="client.html"></i>Testimonials</a></li>
-                     <li> <a href="contact.html"></i>Contact us</a></li>
+                     <li> <a href="testimonial.php"></i>Testimonials</a></li>
+                     <li> <a href="contact.php"></i>Contact us</a></li>
                   </ul>
                </div>
                <div class="col-lg-2 col-md-6 col-sm-6">
@@ -820,7 +834,7 @@
                <div class="row">
                   <div class="col-md-12">
                      <p>© 2022 All Rights Reserved. TMIS</p>
-                     <a href="https://html.design/"></a>
+                     <!-- <a href="https://html.design/"></a> -->
                   </div>
                </div>
             </div>

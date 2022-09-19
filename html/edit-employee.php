@@ -107,10 +107,10 @@
                            <div class="collapse navbar-collapse" id="navbarsExample04">
                               <ul class="navbar-nav mr-auto">
                                  <li class="nav-item ">
-                                    <a class="nav-link" href="index.html"> Home  </a>
+                                    <a class="nav-link" href="index.php"> Home  </a>
                                  </li>
                                  <li class="nav-item">
-                                    <a class="nav-link" href="about.html">about</a>
+                                    <a class="nav-link" href="about.php">about</a>
                                  </li>
                                  <!-- <li class="nav-item">
                                     <a class="nav-link" href="service.html">services</a>
@@ -120,21 +120,19 @@
                                     <a class="nav-link" href="team.html">team </a>
                                  </li> -->
                                  <li class="nav-item">
-                                    <a class="nav-link" href="client.html">Testimonials</a>
+                                    <a class="nav-link" href="testimonial.php">Testimonials</a>
                                  </li>
                                  <li class="nav-item active">
-                                    <a class="nav-link" href="contact.html"> contact us </a>
+                                    <a class="nav-link" href="contact.php"> contact us </a>
                                  </li>
                               </ul>
                            </div>
                         </nav>
                      </div>
                      <div class="col-md-3 col-sm-5 d_none">
-                        <ul class="sign">
-                           <li><a class="sign_btn" href="#">sign up now</a></li>
-                           <li class="nav-item">
-                              <a class="nav-link" href="contact.html"> Login </a>
-                           </li>
+                     <ul class="sign">
+                           <li><a class="sign_btn" href="sign-out.php">sign out</a></li>
+                           
                            <!-- <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li> -->
                         </ul>
                      </div>
@@ -152,30 +150,180 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage">
-                     <h2><strong class="yellow">Contact us</strong><br>Share with us</h2>
+                     <h2><strong class="yellow"></strong><br>Edit Employee</h2>
                   </div>
                </div>
             </div>
-            <div class="row">
-               <div class="col-md-8 offset-md-2">
-                  <form id="post_form" class="contact_form">
-                     <div class="row">
-                        <div class="col-md-12 ">
-                           <input class="contact_control" placeholder=" Name" type="type" name="Name"> 
-                        </div>
-                        <div class="col-md-12">
-                           <input class="contact_control" placeholder="Email" type="type" name="Email"> 
-                        </div>
-                        <!-- <div class="col-md-12">
-                           <input class="contact_control" placeholder="Phone Number " type="type" name="Phone Number ">                          
-                        </div> -->
-                        <div class="col-md-12">
-                           <textarea class="textarea" placeholder="Message" type="type" Message="Name">Message </textarea>
-                        </div>
-                        <div class="col-md-12">
-                           <button class="send_btn">Send</button>
-                        </div>
-                  </form>
+            
+               <?php 
+    
+    include 'config.php';
+// updating code
+if (isset($_REQUEST['updat'])) {
+  // echo "updating successful";
+  $eid=$_REQUEST['updat'];
+  $sql_fetch="SELECT * FROM employee WHERE eid='$eid'";
+  $sql_query=mysqli_query($conn, $sql_fetch);
+  $row=mysqli_fetch_assoc($sql_query);
+
+
+  if(isset($_POST['record-update'])){
+  //echo working
+  $eid=$_POST['eid'];
+  $firstName = $_POST['firstName'];
+  $lastName = $_POST['lastName'];
+  $nin = $_POST['nin'];
+  $age = $_POST['age'];
+  $contact = $_POST['contact'];
+  $address = $_POST['address'];
+  $email = $_POST['email'];
+  $next_of_kin = $_POST['next_of_kin'];
+  $employer = $_POST['employer'];
+  $job = $_POST['job'];
+  $contract = $_POST['contract'];
+  $salary = $_POST['salary'];
+ 
+
+  
+
+  $sql_insert="UPDATE employee SET `eid`='$eid', `firstName`='$firstName', `lastName`='$lastName', `nin`='$nin', `age`='$age', `contact`='$contact', `address`='$address', `email`='$email', `next_of_kin`='$next_of_kin', `employer`='$employer', `job`='$job', `contract`='$contract', `salary`='$salary' WHERE eid='$eid'";
+  $sql_query=mysqli_query($conn,$sql_insert);
+  if ($sql_query==TRUE) {
+    echo " update successful";
+  }else{
+    echo mysqli_error($conn);
+  }
+}
+  ?>
+               <form action="" method="Post">
+											<div class="mb-3">
+												<label class="form-label"> Employee First Name</label>
+												<input class="form-control form-control-lg" type="text" value="<?php echo $row['firstName']; ?>" name="firstName" />
+											</div>
+											<div class="mb-3">
+												<label class="form-label">Employee last Name</label>
+												<input class="form-control form-control-lg" type="text" value="<?php echo $row['lastName']; ?>" name="lastName" />
+											</div>
+											<div class="mb-3">
+												<label class="form-label">Employee National Identification Number</label>
+												<input class="form-control form-control-lg" type="text" value="<?php echo $row['nin']; ?>" name="nin" />
+											</div>
+											<div class="mb-3">
+												<label class="form-label">Date Of Birth</label>
+												<input class="form-control form-control-lg" type="date"  value="<?php echo $row['age']; ?>" name="age" />
+											</div>
+											<div class="mb-3">
+												<label class="form-label">Contact</label>
+												<input class="form-control form-control-lg" type="text"  value="<?php echo $row['contact']; ?>" name="contact" />
+											</div>
+											<div class="mb-3">
+												<label class="form-label">Address</label>
+												<input class="form-control form-control-lg" type="text" value="<?php echo $row['address']; ?>" name="address" placeholder="your current address" required />
+											</div>
+											<div class="mb-3">
+												<label class="form-label">Email</label>
+												<input class="form-control form-control-lg" type="text" value="<?php echo $row['email']; ?>" name="email" />
+											</div>
+											<div class="mb-3">
+												<label class="form-label">Next Of kin</label>
+												<input class="form-control form-control-lg" type="text" value="<?php echo $row['next_of_kin']; ?>" name="next_of_kin" />
+											</div>
+											<div class="mb-3">
+												<label class="form-label">Employer</label>
+												<input class="form-control form-control-lg" type="text" value="<?php echo $row['employer']; ?>" name="employer" />
+											</div>
+											<div class="mb-3">
+												<label class="form-label">Job</label>
+												<select class="form-control form-control-lg" value="<?php echo $row['job']; ?>" name="job" required>
+												<option value="Cleaner">Cleaner</option>
+                                                <option value="Medical">Medical</option>
+                                                <option value="Cargo lifter">Cargo Lifter</option>
+                                                </select>
+											</div>
+											<div class="mb-3">
+												<label class="form-label">Contract in Years</label>
+												<input class="form-control form-control-lg" type="text" value="<?php echo $row['contract']; ?>" name="contract" />
+											</div>
+											<div class="mb-3">
+												<label class="form-label">Salary in Shs</label>
+												<input class="form-control form-control-lg" type="text" value="<?php echo $row['salary']; ?>" name="salary" />
+											</div>
+											<div class="text-center mt-3">
+												<!-- <a href="index.html" class="btn btn-lg btn-primary">Sign up</a> -->
+												<button type="submit" name="record-update" class="btn btn-lg btn-primary">Add Employee</button>
+											</div>
+										</form>
+               <?php
+}   
+    // deleting code
+if (isset($_REQUEST['delete'])){
+    $eid=$_REQUEST['delete'];
+    $sql_delete="DELETE FROM employee WHERE `eid`='$eid'";
+    $sql_query=mysqli_query($conn, $sql_delete);
+    if ($sql_query==TRUE){
+      echo "Deleted successful";
+    }else{
+      echo mysqli_error($conn);
+    }
+
+  }
+
+  // retrieving data
+  $sql_fetch="SELECT * FROM employee";
+  $sql_query=mysqli_query($conn, $sql_fetch);
+    ?>
+	<form action="" method="POST" >
+<table border="1">
+    <tr>
+        <th>Employee Id</th>
+        <th>Names</th>
+        <!-- <th>Last Name</th> -->
+        <th>Nin</th>
+        <th>Age</th>
+        <th>Contact</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th>Next Of Kin</th>
+        <th>Employer</th>
+        <th>Job</th>
+        <th>Contract</th>
+        <th>Salary</th>
+        <th>Delete</th>
+        <th>Update</th>
+       
+    </tr>
+    <?php 
+  while($rows=mysqli_fetch_assoc($sql_query)){
+  // echo $rows['patientId']."<br>";
+   ?>
+    <tr>
+        <td><?php echo $rows['eid']?></td>
+        <!-- <td><a href="employee_report.php?employee=<?= $rows['eid'] ?>"><?= $rows['firstName']?>  <?= $rows['lastName']?></a></td> -->
+        <!-- <td><a href="prisoner_report.php?prisoner=<?= $row['prisoner_No'] ?>"><?= $row['name'] ?></a></td> -->
+        <td><?php echo $rows['firstName']?>   <?php echo $rows['lastName']?></td>
+        <td><?php echo $rows['nin']?></td>
+        <td><?php echo $rows['age']?></td>
+        <td><?php echo $rows['contact']?></td>
+        <td><?php echo $rows['address']?></td>
+        <td><?php echo $rows['email']?></td>
+        <td><?php echo $rows['next_of_kin']?></td>
+        <td><?php echo $rows['employer']?></td>
+        <td><?php echo $rows['job']?></td>
+        <td><?php echo $rows['contract']?></td>
+        <td><?php echo $rows['salary']?></td>
+        <td><a href="?delete=<?php echo $rows['eid']?>">Delete</a></td>
+        <td><a href="?updat=<?php echo $rows['eid']?>">Update</a></td>
+    </tr>
+   
+    <?php 
+} ?>
+</table>
+  </form>
+  <tr>
+                     <td>
+                        <button onclick="window.print()">PRINT</button>
+                     </td>
+                  </tr>
                   </div>
                </div>
             </div>
@@ -184,80 +332,17 @@
       <!-- end contact  section -->
       <!--  footer -->
       <footer >
-         <div class="footer">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-12">
-                     <a class="logo2" href="#"><img src="images/tmis.png" alt="#" /></a>
-                  </div>
-                  <div class="col-lg-5 col-md-6 col-sm-6">
-                     <h3>Contact Us</h3>
-                     <ul class="location_icon">
-                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a> Kampala,
-                           <br> 
-                        </li>
-                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>tmis@gmail.com<br></li>
-                        <li><a href="#"><i class="fa fa-volume-control-phone" aria-hidden="true"></i></a>+256 782710288<br>+256 706090938</li>
-                     </ul>
-                     <ul class="social_icon">
-                        <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                        <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li> <a href="#"> <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                        <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
-                     </ul>
-                  </div>
-                  <div class="col-lg-2 col-md-6 col-sm-6">
-                     <h3>Menus</h3>
-                     <ul class="link_icon">
-                        <li class="active"> <a href="index.html"> Home</a></li>
-                        <li>
-                           <a href="about.html">
-                              </i>About Us
-                        </li>
-                        <!-- <li> <a href="service.html"> </i>Services</a></li> -->
-                        <!-- <li> <a href="team.html"></i>Team</a></li> -->
-                        <li> <a href="client.html"></i>Testimonials</a></li>
-                        <li> <a href="contact.html"></i>Contact us</a></li>
-                     </ul>
-                  </div>
-                  <div class="col-lg-2 col-md-6 col-sm-6">
-                     <h3>Services</h3>
-                     <ul class="link_icon">
-                        <li> <a href="#"> Registration </a></li>
-                        <li>
-                           <a href="#">
-                              Monitoring
-                        </li>
-                        <li> <a href="#"> Tracking </a></li>
-                        <li> <a href="#">Reports</a></li>
-                        <!-- <li> <a href="#"> November 25, 2019</a></li> -->
-                     </ul>
-                  </div>
-                  <div class="col-lg-3 col-md-6 col-sm-6">
-                     <h3>Newsletter</h3>
-                     <form id="request" class="main_form">
-                        <div class="row">
-                           <div class="col-md-12 ">
-                              <input class="news" placeholder="Your Email" type="type" name="Your Email">
-                           </div>
-                           <div class="col-md-12">
-                              <button class="send_btn">Send</button>
-                           </div>
-                        </div>
-                     </form>
-                  </div>
-               </div>
-            </div>
+         
             <div class="copyright">
                <div class="container">
                   <div class="row">
                      <div class="col-md-12">
-                        <p>© 2022 All Rights Reserved.<a href="https://html.design/"> TMIS</a></p>
+                        <p>© 2022 All Rights Reserved. TMIS</a></p>
                      </div>
                   </div>
                </div>
             </div>
-         </div>
+      
       </footer>
       <!-- end footer -->
       <!-- Javascript files-->

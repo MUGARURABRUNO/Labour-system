@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -126,13 +127,25 @@
                               <li class="nav-item">
                                  <a class="nav-link" href="contact.php"> contact us </a>
                               </li>
+                              <div class="dropdown show">
+                                    <a class="nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Services
+                                    </a>
+
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <a class="dropdown-item" href="new-employee.php">Registration</a>
+                                        <a class="dropdown-item" href="edit-employee.php">Tracking</a>
+                                        <a class="dropdown-item" href="message.php">Messages</a>
+                                    </div>
+                                </div>
+                              
                            </ul>
                         </div>
                      </nav>
                   </div>
                   <div class="col-md-3 col-sm-5 d_none">
                      <ul class="sign">
-                        <li><a class="sign_btn" href="pages-sign-in.php">Login</a></li>
+                        <li><a class="sign_btn" href="sign-out.php">sign out</a></li>
                         
                         <!-- <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li> -->
                       
@@ -785,7 +798,19 @@
                      <li> <a href="contact.php"></i>Contact us</a></li>
                   </ul>
                </div>
-              
+               <div class="col-lg-2 col-md-6 col-sm-6">
+                  <h3>Services</h3>
+                  <ul class="link_icon">
+                     <li> <a href="#"> Registration </a></li>
+                     <li>
+                        <a href="#">
+                           Monitoring
+                     </li>
+                     <li> <a href="#"> Tracking </a></li>
+                     <li> <a href="#">Report</a></li>
+                     <!-- <li> <a href="#"> November 25, 2019</a></li> -->
+                  </ul>
+               </div>
                <div class="col-lg-3 col-md-6 col-sm-6">
                   <h3>Newsletter</h3>
                   <form id="request" class="main_form">
