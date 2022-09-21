@@ -29,6 +29,10 @@
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
    </head>
    <!-- body -->
    <body class="main-layout">
@@ -55,7 +59,7 @@
                                  <option value="Choice 1">English</option>
                                  <option value="Choice 1">Falkla</option>
                                  <option value="Choice 2">Germa</option>
-                                 <option value="Choice 3">Neverl</option>
+                                 <!-- <option value="Choice 3">Neverl</option> -->
                               </select>
                            </div>
                         </form>
@@ -82,7 +86,7 @@
                   <div class="row d_flex">
                      <div class="col-md-4 col-sm-4 d_none">
                         <ul class="conta_icon">
-                           <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i> Call Us : +256 706090938</a> </li>
+                           <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i> Call Us : +256 782710288</a> </li>
                         </ul>
                      </div>
                      <div class="col-md-4 col-sm-4 " >
@@ -107,7 +111,7 @@
                            <div class="collapse navbar-collapse" id="navbarsExample04">
                               <ul class="navbar-nav mr-auto">
                                  <li class="nav-item ">
-                                    <a class="nav-link" href="index.php"> Home </a>
+                                    <a class="nav-link" href="index.php"> Home  </a>
                                  </li>
                                  <li class="nav-item">
                                     <a class="nav-link" href="about.php">about</a>
@@ -116,15 +120,13 @@
                                     <a class="nav-link" href="service.html">services</a>
                                  </li> -->
                                  <!-- <li class="nav-item">
+                               
                                     <a class="nav-link" href="team.html">team </a>
                                  </li> -->
-                                 <li class="nav-item active">
-                                    <a class="nav-link" href="testimonial.php">Testimonials</a>
-                                 </li>
-                                 <li class="nav-item active">
-                                    <a class="nav-link" href="help.php">HELP DESK</a>
-                                 </li>
                                  <li class="nav-item">
+                                    <a class="nav-link" href="help.php">help desk</a>
+                                 </li>
+                                 <li class="nav-item active">
                                     <a class="nav-link" href="contact.php"> contact us </a>
                                  </li>
                               </ul>
@@ -132,13 +134,10 @@
                         </nav>
                      </div>
                      <div class="col-md-3 col-sm-5 d_none">
-                        <ul class="sign">
+                     <ul class="sign">
                            <li><a class="sign_btn" href="pages-sign-in.php">Login</a></li>
-                           <!-- <li class="nav-item">
-                              <a class="nav-link" href="dash/pages-sign-in.php"> Login </a>
-                           </li> -->
+                           
                            <!-- <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li> -->
-                         
                         </ul>
                      </div>
                   </div>
@@ -148,155 +147,93 @@
       </header>
       <!-- end header inner -->
       <!-- end header -->
-      <!-- banner -->
-     
-      <!-- testimonial -->
-      <div id="client"  class="testimonial">
+ 
+      <!-- contact  section -->
+      <div id="contact" class="contact ">
          <div class="container">
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage">
-                     <h2><strong class="yellow">testimonial</strong><br>What people say</h2>
+                     <h2><strong class="yellow"></strong><br>General Enquiry</h2>
                   </div>
                </div>
             </div>
-         </div>
-         <div id="testimo" class="carousel slide testimonial_Carousel " data-ride="carousel">
-            <ol class="carousel-indicators">
-               <li data-target="#testimo" data-slide-to="0" class="active"></li>
-               <li data-target="#testimo" data-slide-to="1"></li>
-               <li data-target="#testimo" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-               <div class="carousel-item active">
-                  <div class="container">
-                     <div class="carousel-caption ">
-                        <div class="row">
-                           <div class="col-md-6 offset-md-3">
-                              <div class="test_box">
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-                                 <i><img src="images/cos.jpg" alt="#"/></i>         <span>Consectetur</span>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="carousel-item">
-                  <div class="container">
-                     <div class="carousel-caption">
-                        <div class="row">
-                           <div class="col-md-6 offset-md-3">
-                              <div class="test_box">
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-                                 <i><img src="images/cos.jpg" alt="#"/></i>         <span>Consectetur</span>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="carousel-item">
-                  <div class="container">
-                     <div class="carousel-caption">
-                        <div class="row">
-                           <div class="col-md-6 offset-md-3">
-                              <div class="test_box">
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-                                 <i><img src="images/cos.jpg" alt="#"/></i>         <span>Consectetur</span>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
+            <div class="row">
+               <div class="col-md-8 offset-md-2">
+               <form action="" method="Post" enctype="multipart/form-data">
+               <div class="container">
+  <h2>Status</h2>
+  <!-- <p>The form below contains three inline radio buttons:</p> -->
+
+    <label class="radio-inline">
+      <input type="radio" name="optradio" checked>Company
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio">Individual
+    </label>
+    <!-- <label class="radio-inline">
+      <input type="radio" name="optradio">Option 3
+    </label> -->
+  
+</div>
+
+                                 <div class="mb-3">
+												<label class="form-label">Name</label>
+												<input class="form-control form-control-lg" type="text" name="a_name" placeholder="Agency name.." required />
+											</div>
+											<div class="mb-3">
+												<label class="form-label">Email</label>
+												<input class="form-control form-control-lg" type="email" name="email" placeholder="Your email.." required/>
+											</div>
+                                 <div class="mb-3">
+												<label class="form-label">Contact</label>
+												<input class="form-control form-control-lg" type="text" name="email" placeholder="Your Contact.." required/>
+											</div>
+											<div class="mb-3">
+												<label class="form-label">Address</label>
+												<input class="form-control form-control-lg" type="text" name="address" placeholder="Your Address.." required/>
+											</div>
+											<div class="mb-3">
+												<label class="form-label">Attach a file</label>
+												<input class="form-control form-control-lg" type="file"  name="experience" />
+											</div>
+											<div class="mb-3">
+												<label class="form-label">Tell us your enquiry in short</label>
+												<input class="form-control form-control-lg" type="text"  name="" placeholder="Type Your passsword" required/>
+											</div>
+                                 <div class="mb-3">
+												<label class="form-label">Tell us more</label>
+												<!-- <input class="form-control form-control-lg" type="date"  name="experience" placeholder="Your Agency experience.." required/> -->
+                                    <textarea class="form-control form-control-lg" name="" id="" cols="30" rows="10"></textarea>
+											</div>
+											
+										
+											<div class="text-center mt-3">
+												<button type="submit" name="SUBMIT" class="btn btn-lg btn-primary">Submit</button>
+											</div>
+											<div class="text-center mt-3">
+												<a href="index.php" class="btn btn-lg btn-primary">Back</a>
+											</div>
+										</form>
                   </div>
                </div>
             </div>
-            <a class="carousel-control-prev" href="#testimo" role="button" data-slide="prev">
-            <i class="fa fa-chevron-left" aria-hidden="true"></i>
-            </a>
-            <a class="carousel-control-next" href="#testimo" role="button" data-slide="next">
-            <i class="fa fa-chevron-right" aria-hidden="true"></i>
-            </a>
          </div>
       </div>
-      <!-- end testimonial -->
-    
+      <!-- end contact  section -->
       <!--  footer -->
       <footer >
-         <div class="footer">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-12">
-                     <a class="logo2" href="#"><img src="images/tmis.png" alt="#" /></a>
-                  </div>
-                  <div class="col-lg-5 col-md-6 col-sm-6">
-                     <h3>Contact Us</h3>
-                     <ul class="location_icon">
-                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a> Kampala,
-                           <br> 
-                        </li>
-                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>tmis@gmail.com<br></li>
-                        <li><a href="#"><i class="fa fa-volume-control-phone" aria-hidden="true"></i></a>+256 782710288<br>+256 706090938</li>
-                     </ul>
-                     <ul class="social_icon">
-                        <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                        <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li> <a href="#"> <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                        <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
-                     </ul>
-                  </div>
-                  <div class="col-lg-2 col-md-6 col-sm-6">
-                     <h3>Menus</h3>
-                     <ul class="link_icon">
-                        <li class="active"> <a href="index.php"> Home</a></li>
-                        <li>
-                           <a href="about.php">
-                              </i>About Us
-                        </li>
-                        <!-- <li> <a href="service.html"> </i>Services</a></li> -->
-                        <!-- <li> <a href="team.html"></i>Team</a></li> -->
-                        <li> <a href="testimonial.php"></i>Testimonials</a></li>
-                        <li> <a href="contact.php"></i>Contact us</a></li>
-                     </ul>
-                  </div>
-                  <div class="col-lg-2 col-md-6 col-sm-6">
-                     <h3>Services</h3>
-                     <ul class="link_icon">
-                        <li> <a href="#"> Registration </a></li>
-                        <li>
-                           <a href="#">
-                              Monitoring
-                        </li>
-                        <li> <a href="#"> Tracking </a></li>
-                        <li> <a href="#">Reports</a></li>
-                        <!-- <li> <a href="#"> November 25, 2019</a></li> -->
-                     </ul>
-                  </div>
-                  <div class="col-lg-3 col-md-6 col-sm-6">
-                     <h3>Newsletter</h3>
-                     <form id="request" class="main_form">
-                        <div class="row">
-                           <div class="col-md-12 ">
-                              <input class="news" placeholder="Your Email" type="type" name="Your Email">
-                           </div>
-                           <div class="col-md-12">
-                              <button class="send_btn">Send</button>
-                           </div>
-                        </div>
-                     </form>
-                  </div>
-               </div>
-            </div>
+         
             <div class="copyright">
                <div class="container">
                   <div class="row">
                      <div class="col-md-12">
-                        <p>© 2022 All Rights Reserved.TMIS</a></p>
+                        <p>© 2022 All Rights Reserved. TMIS</a></p>
                      </div>
                   </div>
                </div>
             </div>
-         </div>
+      
       </footer>
       <!-- end footer -->
       <!-- Javascript files-->
@@ -310,3 +247,26 @@
       <script src="js/custom.js"></script>
    </body>
 </html>
+<?php
+
+include 'config.php';
+
+ if (isset($_POST['REGISTER'])) {
+  $a_name = $_POST['a_name'];
+  $email = $_POST['email'];
+  $address = $_POST['address'];
+  $experience = $_POST['experience'];
+  $image = $_POST['image'];
+  $password = $_POST['password'];
+  
+
+  $sql_insert = "INSERT INTO `agency`(`a_name`,`email`,`address`,`experience`,`image`,`password`) VALUES ('$a_name','$email','$address','$experience','$image','$password')";
+  $sql_query = mysqli_query($conn, $sql_insert);
+  if ($sql_query == TRUE) {
+    echo "successful";
+    // header('location: pages-clients.html');
+  } else {
+    echo mysqli_error($conn);
+  }
+}
+?>

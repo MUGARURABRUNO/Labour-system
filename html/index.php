@@ -1,3 +1,38 @@
+<?php 
+include "config.php";
+
+if (isset($_POST['REGISTER'])) {
+   $name = $_POST['name'];
+   $email = $_POST['email'];
+   $message = $_POST['message'];
+   // $experience = $_POST['experience'];
+   // $password = $_POST['password'];
+
+   $profile= $_FILES['photo']['name'];
+   $file_tmp= $_FILES['photo']['tmp_name'];
+          //   image Upload
+     move_uploaded_file($file_tmp,"images/".$profile); 
+
+   // $query=mysqli_query($conn,"SELECT * FROM agency WHERE email=  '$email'");
+   // if(mysqli_num_rows($query)>0){
+   //     echo "Email Already Exists";
+   // }else{
+
+   $sql_insert = "INSERT INTO `testimony`( `name`, `email`, `photo`, `message`) VALUES ('$name','$email','$profile','$message')";
+
+     if (mysqli_query($conn, $sql_insert)) {
+
+   //   echo "Data Inserted";
+   header("Location: index.php?success=You have submitted Succesfully");
+}else{
+// echo "Data not inserted";
+// header("Location: header.php?error=Email already taken, register again");
+              }
+        }
+
+  
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,6 +65,8 @@
    <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      
+      <!-- $i = $_GET['page_no'] * $people_per_page + 1; -->
 </head>
 <!-- body -->
 
@@ -121,7 +158,7 @@
                                  <a class="nav-link" href="team.html">team </a>
                               </li> -->
                               <li class="nav-item">
-                                 <a class="nav-link" href="testimonial.php">Testimonials</a>
+                                 <a class="nav-link" href="help.php">Help Desk</a>
                               </li>
                               <li class="nav-item">
                                  <a class="nav-link" href="contact.php"> contact us </a>
@@ -715,28 +752,42 @@
          <div class="row">
             <div class="col-md-12">
                <div class="titlepage">
-                  <h2><strong class="yellow">Contact us</strong><br>Share With Us</h2>
+                  <h2><strong class="yellow">Testify</strong><br>Share With Us</h2>
                </div>
             </div>
          </div>
          <div class="row">
             <div class="col-md-8 offset-md-2">
-               <form id="post_form" class="contact_form">
-                  <div class="row">
-                     <div class="col-md-12 ">
-                        <input class="contact_control" placeholder=" Name" type="type" name="Name">
+               <form action="" id="post_form" class="contact_form"  method="post" enctype="multipart/form-data">
+
+                    
+            </div>
+            <?php if (isset($_POST['success'])) { ?>
+     		<p class="success"><?php echo $_POST['success']; ?></p>
+     	<?php } ?>
+
+		 
+
+                  <div style="margin-left:27%;" class="row">
+                     <div  class="col-md-12 ">
+                        <input style="width: 500px;" class="contact_control" placeholder=" Name" type="text" name="name">
                      </div>
                      <div class="col-md-12">
-                        <input class="contact_control" placeholder="Email" type="type" name="Email">
+                        <input style="width: 500px; margin-top:30px;" class="contact_control" placeholder="Email" type="email" name="Email">
+                     </div>
+
+                     <div class="col-md-12">
+                        <label for="">Photo</label>
+                        <input style="width: 500px; margin-top:30px;" class="contact_control" type="file" name="Email">
                      </div>
                      <!-- <div class="col-md-12">
                         <input class="contact_control" placeholder="Phone Number " type="type" name="Phone Number ">
                      </div> -->
                      <div class="col-md-12">
-                        <textarea class="textarea" placeholder="Message" type="type" Message="Name">Message </textarea>
+                        <textarea style="width: 500px; height:100px; margin-top:30px;" class="textarea" placeholder="Message" type="type" Message="message">Message </textarea>
                      </div>
                      <div class="col-md-12">
-                        <button class="send_btn">Send</button>
+                        <button style="width: 100px; background-color:orange; border-radius:12px;" class="send_btn" type="submit" name="REGISTER">Submit</button>
                      </div>
                </form>
             </div>

@@ -29,6 +29,10 @@
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
    </head>
    <!-- body -->
    <body class="main-layout">
@@ -55,7 +59,7 @@
                                  <option value="Choice 1">English</option>
                                  <option value="Choice 1">Falkla</option>
                                  <option value="Choice 2">Germa</option>
-                                 <option value="Choice 3">Neverl</option>
+                                 <!-- <option value="Choice 3">Neverl</option> -->
                               </select>
                            </div>
                         </form>
@@ -120,7 +124,7 @@
                                     <a class="nav-link" href="team.html">team </a>
                                  </li> -->
                                  <li class="nav-item">
-                                    <a class="nav-link" href="testimonial.php">Testimonials</a>
+                                    <a class="nav-link" href="help.php">help</a>
                                  </li>
                                  <li class="nav-item active">
                                     <a class="nav-link" href="contact.php"> contact us </a>
@@ -131,7 +135,7 @@
                      </div>
                      <div class="col-md-3 col-sm-5 d_none">
                      <ul class="sign">
-                           <li><a class="sign_btn" href="sign-out.php">sign out</a></li>
+                           <li><a class="sign_btn" href="pages-sign-in.php">Login</a></li>
                            
                            <!-- <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li> -->
                         </ul>
@@ -150,36 +154,62 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage">
-                     <h2><strong class="yellow"></strong><br>Add new Agency</h2>
+                     <h2><strong class="yellow"></strong><br>General Enquiry</h2>
                   </div>
                </div>
             </div>
             <div class="row">
                <div class="col-md-8 offset-md-2">
                <form action="" method="Post" enctype="multipart/form-data">
-										<div class="mb-3">
-												<label class="form-label">Agency Name</label>
+               <div class="container">
+  <h2>Status</h2>
+  <!-- <p>The form below contains three inline radio buttons:</p> -->
+
+    <label class="radio-inline">
+      <input type="radio" name="optradio" checked>Company
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio">Individual
+    </label>
+    <!-- <label class="radio-inline">
+      <input type="radio" name="optradio">Option 3
+    </label> -->
+  
+</div>
+
+                                 <div class="mb-3">
+												<label class="form-label">Name</label>
 												<input class="form-control form-control-lg" type="text" name="a_name" placeholder="Agency name.." required />
 											</div>
 											<div class="mb-3">
 												<label class="form-label">Email</label>
 												<input class="form-control form-control-lg" type="email" name="email" placeholder="Your email.." required/>
 											</div>
+                                 <div class="mb-3">
+												<label class="form-label">Contact</label>
+												<input class="form-control form-control-lg" type="text" name="email" placeholder="Your Contact.." required/>
+											</div>
 											<div class="mb-3">
-												<label class="form-label">Agency Address</label>
+												<label class="form-label">Address</label>
 												<input class="form-control form-control-lg" type="text" name="address" placeholder="Your Address.." required/>
 											</div>
 											<div class="mb-3">
-												<label class="form-label">Experience</label>
-												<input class="form-control form-control-lg" type="date"  name="experience" placeholder="Your Agency experience.." required/>
+												<label class="form-label">Attach a file</label>
+												<input class="form-control form-control-lg" type="file"  name="experience" />
 											</div>
 											<div class="mb-3">
-												<label class="form-label">Password</label>
-												<input class="form-control form-control-lg" type="text"  name="password" placeholder="Type Your passsword" required/>
+												<label class="form-label">Tell us your enquiry in short</label>
+												<input class="form-control form-control-lg" type="text"  name="" placeholder="Type Your passsword" required/>
 											</div>
+                                 <div class="mb-3">
+												<label class="form-label">Tell us more</label>
+												<!-- <input class="form-control form-control-lg" type="date"  name="experience" placeholder="Your Agency experience.." required/> -->
+                                    <textarea class="form-control form-control-lg" name="" id="" cols="30" rows="10"></textarea>
+											</div>
+											
 										
 											<div class="text-center mt-3">
-												<button type="submit" name="REGISTER" class="btn btn-lg btn-primary">Add Agency</button>
+												<button type="submit" name="SUBMIT" class="btn btn-lg btn-primary">Submit</button>
 											</div>
 											<div class="text-center mt-3">
 												<a href="index.php" class="btn btn-lg btn-primary">Back</a>

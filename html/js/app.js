@@ -1,14 +1,9 @@
-var acc = document.getElementsByClassName('accordion');
-var i;
-var len = acc.length;
-for(i= 0; i < len; i++){
-    acc[i].addEventListener('click', function() {
-        this.classList.toggle('active');
-        var panel = this.nextElementSibiling;
-        if(panel.style.maxHeight){
-            panel.style.maxHeight = null;
-        }else{
-            panel.style.maxHeight = panel.scrollHeight + 'px'
-        }
-    })
+// Code By Webdevtrick ( https://webdevtrick.com )
+const items = document.querySelectorAll(".accordion a");
+
+function toggleAccordion(){
+  this.classList.toggle('active');
+  this.nextElementSibling.classList.toggle('active');
 }
+
+items.forEach(item => item.addEventListener('click', toggleAccordion));

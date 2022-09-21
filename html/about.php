@@ -118,8 +118,11 @@
                                  <!-- <li class="nav-item">
                                     <a class="nav-link" href="team.html">team </a>
                                  </li> -->
-                                 <li class="nav-item">
+                                 <!-- <li class="nav-item">
                                     <a class="nav-link" href="testimonial.php">Testimonials</a>
+                                 </li> -->
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="help.php">HELP DESK</a>
                                  </li>
                                  <li class="nav-item">
                                     <a class="nav-link" href="contact.php"> contact us </a>
@@ -130,10 +133,10 @@
                      </div>
                      <div class="col-md-3 col-sm-5 d_none">
                         <ul class="sign">
-                           <li><a class="sign_btn" href="dash/pages-sign-up.php">sign up now</a></li>
-                           <li class="nav-item">
+                           <li><a class="sign_btn" href="pages-sign-in.php">Login</a></li>
+                           <!-- <li class="nav-item">
                               <a class="nav-link" href="dash/pages-sign-in.php"> Login </a>
-                           </li>
+                           </li> -->
                            <!-- <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li> -->
                         </ul>
                      </div>
