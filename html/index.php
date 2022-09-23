@@ -773,18 +773,18 @@ if (isset($_POST['REGISTER'])) {
                         <input style="width: 500px;" class="contact_control" placeholder=" Name" type="text" name="name">
                      </div>
                      <div class="col-md-12">
-                        <input style="width: 500px; margin-top:30px;" class="contact_control" placeholder="Email" type="email" name="Email">
+                        <input style="width: 500px; margin-top:30px;" class="contact_control" placeholder="Email" type="email" name="email">
                      </div>
 
                      <div class="col-md-12">
                         <label for="">Photo</label>
-                        <input style="width: 500px; margin-top:30px;" class="contact_control" type="file" name="Email">
+                        <input style="width: 500px; margin-top:30px;" class="contact_control" type="file" name="photo">
                      </div>
                      <!-- <div class="col-md-12">
                         <input class="contact_control" placeholder="Phone Number " type="type" name="Phone Number ">
                      </div> -->
                      <div class="col-md-12">
-                        <textarea style="width: 500px; height:100px; margin-top:30px;" class="textarea" placeholder="Message" type="type" Message="message">Message </textarea>
+                        <textarea style="width: 500px; height:100px; margin-top:30px;" name="message" class="textarea" placeholder="Message"  >Message </textarea>
                      </div>
                      <div class="col-md-12">
                         <button style="width: 100px; background-color:orange; border-radius:12px;" class="send_btn" type="submit" name="REGISTER">Submit</button>
