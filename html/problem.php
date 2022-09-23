@@ -1,3 +1,42 @@
+<?php 
+include "config.php";
+
+if (isset($_POST['SUBMIT'])) {
+   $name = $_POST['name'];
+   $email = $_POST['email'];
+   $contact = $_POST['contact'];
+   $address = $_POST['address'];
+   $password = $_POST['password'];
+   $link = $_POST['link'];
+   $problem = $_POST['problem'];
+   $description = $_POST['description'];
+
+
+   $image_name= $_FILES['pic']['name'];
+   $file_tmp= $_FILES['pic']['tmp_name'];
+          //   image Upload
+     move_uploaded_file($file_tmp,"images/".$image_name); 
+
+   // $query=mysqli_query($conn,"SELECT * FROM agency WHERE email=  '$email'");
+   // if(mysqli_num_rows($query)>0){
+   //     echo "Email Already Exists";
+   // }else{
+
+   $sql_insert = "INSERT INTO `problem`( `name`, `email`, `contact`, `address`, `pic`, `link`, `problem`, `description`) VALUES ('$name','$email','$contact','$address','$image_name','$link','$problem','$description')";
+
+     if (mysqli_query($conn, $sql_insert)) {
+
+   //   echo "Data Inserted";
+   header("Location: problem.php?success=You have submitted Succesfully");
+}else{
+// echo "Data not inserted";
+// header("Location: header.php?error=Email already taken, register again");
+              }
+        }
+
+  
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -162,7 +201,7 @@
 
                                  <div class="mb-3">
 												<label class="form-label">Name</label>
-												<input class="form-control form-control-lg" type="text" name="a_name" placeholder="Agency name.." required />
+												<input class="form-control form-control-lg" type="text" name="name" placeholder="Agency name.." required />
 											</div>
 											<div class="mb-3">
 												<label class="form-label">Email</label>
@@ -170,7 +209,7 @@
 											</div>
                                  <div class="mb-3">
 												<label class="form-label">Contact</label>
-												<input class="form-control form-control-lg" type="text" name="email" placeholder="Your Contact.." required/>
+												<input class="form-control form-control-lg" type="text" name="contact" placeholder="Your Contact.." required/>
 											</div>
 											<div class="mb-3">
 												<label class="form-label">Address</label>
@@ -178,20 +217,20 @@
 											</div>
 											<div class="mb-3">
 												<label class="form-label">Attach a file</label>
-												<input class="form-control form-control-lg" type="file"  name="experience" />
+												<input class="form-control form-control-lg" type="file"  name="pic" />
 											</div>
                                             <div class="mb-3">
 												<label class="form-label">Attach a url/Video Link</label>
-												<input class="form-control form-control-lg" type="text" name="address" placeholder="Your Link.." required/>
+												<input class="form-control form-control-lg" type="text" name="link" placeholder="Your Link.." required/>
 											</div>
 											<div class="mb-3">
 												<label class="form-label">Problem</label>
-												<input class="form-control form-control-lg" type="text"  name="" placeholder=" Your problem..." required/>
+												<input class="form-control form-control-lg" type="text"  name="problem" placeholder=" Your problem..." required/>
 											</div>
                                  <div class="mb-3">
 												<label class="form-label">Problem Description</label>
 												<!-- <input class="form-control form-control-lg" type="date"  name="experience" placeholder="Your Agency experience.." required/> -->
-                                    <textarea class="form-control form-control-lg" name="" id="" cols="30" rows="10"></textarea>
+                                    <textarea class="form-control form-control-lg" name="description" id="" cols="30" rows="10"></textarea>
 											</div>
 											
 										

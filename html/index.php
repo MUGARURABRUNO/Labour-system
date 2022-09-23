@@ -67,6 +67,42 @@ if (isset($_POST['REGISTER'])) {
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
       
       <!-- $i = $_GET['page_no'] * $people_per_page + 1; -->
+      <style>
+
+  #stage {
+    margin: 1em auto;
+    width: 382px;
+    height: 292px;
+  }
+
+  #stage a {
+    position: absolute;
+  }
+  #stage a img {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #fff;
+  }
+
+  #stage a:nth-of-type(1) {
+    animation-name: fader;
+    animation-delay: 4s;
+    animation-duration: 1s;
+    z-index: 20;
+  }
+  #stage a:nth-of-type(2) {
+    z-index: 10;
+  }
+  #stage a:nth-of-type(n+3) {
+    display: none;
+  }
+
+  @keyframes fader {
+    from { opacity: 1.0; }
+    to   { opacity: 0.0; }
+  }
+
+</style>
 </head>
 <!-- body -->
 
@@ -196,11 +232,40 @@ if (isset($_POST['REGISTER'])) {
             </div>
             <div class="col-md-5 col-lg-5">
                <div class="ban_img">
-                  <figure><img src="images/crop.png" alt="#" height="200" /></figure>
+                  <!-- <figure><img src="images/crop.png" alt="#" height="200" /> -->
+                  <div id="stage">
+                  <a href="1.jpg"><img src="images/crop.png" width="360" height="270"></a>
+                   <a href="2.jpg"><img src="images/coat.jpg" width="360" height="270"></a>
+                   <a href="3.jpg"><img src="images/Premier.jpg" width="360" height="270"></a>
+                   <a href="4.jpg"><img src="images/logo.png" width="360" height="270"></a>
+                   <a href="5.jpg"><img src="images/service_icon6.png" width="360" height="270"></a>
+                   </div>
+               
+               </figure>
                </div>
             </div>
          </div>
       </div>
+      <!-- slider javascript -->
+      <script>
+
+  window.addEventListener("DOMContentLoaded", function(e) {
+
+    // Original JavaScript code by Chirp Internet: chirpinternet.eu
+    // Please acknowledge use of this code by including this header.
+
+    var stage = document.getElementById("stage");
+    var fadeComplete = function(e) { stage.appendChild(arr[0]); };
+    var arr = stage.getElementsByTagName("a");
+    for(var i=0; i < arr.length; i++) {
+      arr[i].addEventListener("animationend", fadeComplete, false);
+    }
+
+  }, false);
+
+</script>
+
+ <!-- end slider javascript -->
    </section>
    <!-- end banner -->
    <!-- about section -->
@@ -687,6 +752,7 @@ if (isset($_POST['REGISTER'])) {
             </div>
          </div>
       </div>
+  
       <div id="testimo" class="carousel slide testimonial_Carousel " data-ride="carousel">
          <ol class="carousel-indicators">
             <li data-target="#testimo" data-slide-to="0" class="active"></li>
