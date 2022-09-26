@@ -226,7 +226,7 @@
         <a class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary border-top" aria-controls="faq-17" aria-expanded="false" data-toggle="collapse" href="#faq-17" role="button">
           <div class="position-relative">
             <h2 class="h4 m-0 pr-3">
-              What if I want custom gear?
+              What is TMIS ?
             </h2>
             <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
               <i class="fa fa-plus"></i>
@@ -235,7 +235,7 @@
         </a>
         <div class="collapse" id="faq-17" style="">
           <div class="card card-body border-0 p-0">
-            <p>Custom gear can be ordered through our contact form. Additional fees may apply.</p>
+            <p>TMIS is a Tracking and Mangement Information System, that tracks, manages and gives reports on all transactions involved in exported labour business.</p>
   
           </div>
         </div>
@@ -243,7 +243,7 @@
         <a class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary border-top" aria-controls="faq-18" aria-expanded="false" data-toggle="collapse" href="#faq-18" role="button">
           <div class="position-relative">
             <h2 class="h4 m-0 pr-3">
-              What is the official mission statement?
+              What is its vision?
             </h2>
             <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
               <i class="fa fa-plus"></i>
@@ -261,7 +261,7 @@
         <a class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary border-top" aria-controls="faq-19" aria-expanded="false" data-toggle="collapse" href="#faq-19" role="button">
           <div class="position-relative">
             <h2 class="h4 m-0 pr-3">
-              What is the purpose of LunarXP?
+              What is its vision?
             </h2>
             <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
               <i class="fa fa-plus"></i>
@@ -279,7 +279,7 @@
         <a class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary  border-top" aria-controls="faq-20" aria-expanded="false" data-toggle="collapse" href="#faq-20" role="button">
           <div class="position-relative">
             <h2 class="h4 m-0 pr-3">
-              What is the best email to reach you at?
+              Why TMIS was developed?
             </h2>
             <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
               <i class="fa fa-plus"></i>
@@ -288,7 +288,8 @@
         </a>
         <div class="collapse" id="faq-20">
           <div class="card card-body border-0 p-0">
-            <p>The best email for any inquiries is email@email.com!</p>
+            <p>TMIS was developed to track, manage, monitor and report all transactions involved in labour export industry to help ensure smooth business and more so the <br>
+         safety of young men and women who go to pursue their dreams in foreign countries.</p>
             <p>
             </p>
           </div>
@@ -297,7 +298,7 @@
         <a class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary  border-top" aria-controls="faq-21" aria-expanded="false" data-toggle="collapse" href="#faq-21" role="button">
           <div class="position-relative">
             <h2 class="h4 m-0 pr-3">
-              Where can I read more about this company?
+              How we work?
             </h2>
             <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
               <i class="fa fa-plus"></i>
@@ -306,7 +307,8 @@
         </a>
         <div class="collapse" id="faq-21">
           <div class="card card-body border-0 p-0">
-            <p>Lorem ipsum dolor sit!</p>
+            <p>In conjunction with the government of uganda, through the Ministry of Labour, Gender and Social Development.<br>
+         Every participating entity or Agency that deals with labour export must be registered on TMIS since it is a government policy</p>
             <p>
             </p>
           </div>
@@ -324,7 +326,8 @@
         </a>
         <div class="collapse" id="faq-22">
           <div class="card card-body border-0 p-0">
-            <p>The best time to call is 24/7! We are always available to answer any questions.</p>
+            <p>TMIS operates 24/7, you can reach us through our social media sites, our emails and contacts displayed on the website.<br>
+         We have sections in our websites where the public can enquire, raise a complaint or even testify or<br> give feedback on our work or anything concerning this industry. </p>
             <p>
             </p>
           </div>
@@ -351,94 +354,96 @@ for(i= 0; i < len; i++){
           </script>
          
 
-	<!--  footer -->
-   <footer>
-         <div class="footer">
+	 <!--  footer -->
+    <footer>
+      <div class="footer">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <a class="logo2" href="#"><img src="images/tmis.png" alt="#" /></a>
+               </div>
+               <div class="col-lg-5 col-md-6 col-sm-6">
+                  <h3>Contact Us</h3>
+                  <ul class="location_icon">
+                     <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a> Kampala,
+                        <br> 
+                     </li>
+                     <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>tmis@gmail.com<br></li>
+                     <li><a href="#"><i class="fa fa-volume-control-phone" aria-hidden="true"></i></a>+256 782710288<br>+256 706090938</li>
+                  </ul>
+                  <ul class="social_icon">
+                     <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                     <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
+                     <li> <a href="#"> <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                     <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
+                  </ul>
+               </div>
+               <div class="col-lg-2 col-md-6 col-sm-6">
+                  <h3>Menus</h3>
+                  <ul class="link_icon">
+                     <li class="active"> <a href="index.php"> Home</a></li>
+                     <li>
+                        <a href="about.php">
+                           </i>About Us
+                     </li>
+                     <!-- <li> <a href="service.html"> </i>Services</a></li> -->
+                     <!-- <li> <a href="team.html"></i>Team</a></li> -->
+                     <li> <a href="help.php"></i>Help Desk</a></li>
+                     <li> <a href="contact.php"></i>Contact us</a></li>
+                  </ul>
+               </div>
+               <div class="col-lg-2 col-md-6 col-sm-6">
+                  <h3>Services</h3>
+                  <ul class="link_icon">
+                     <li> <a href="#">Tracking</a></li>
+                     <li>
+                        <a href="#">
+                           </i>Monitoring
+                     </li>
+                     <!-- <li> <a href="service.html"> </i>Services</a></li> -->
+                     <!-- <li> <a href="team.html"></i>Team</a></li> -->
+                     <li> <a href="#"></i>Management</a></li>
+                     <li> <a href="#"></i>Reports</a></li>
+                  </ul>
+               </div>
+              
+               <div class="col-lg-3 col-md-6 col-sm-6">
+                  <h3>Newsletter</h3>
+                  <form id="request" class="main_form">
+                     <div class="row">
+                        <div class="col-md-12 ">
+                           <input class="news" placeholder="Your Email" type="type" name="Your Email">
+                        </div>
+                        <div class="col-md-12">
+                           <button class="send_btn">Send</button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+         <div class="copyright">
             <div class="container">
                <div class="row">
                   <div class="col-md-12">
-                     <a class="logo2" href="#"><img src="images/tmis.png" alt="#" /></a>
-                  </div>
-                  <div class="col-lg-5 col-md-6 col-sm-6">
-                     <h3>Contact Us</h3>
-                     <ul class="location_icon">
-                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a> Kampala,
-                           <br> 
-                        </li>
-                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>tmis@gmail.com<br></li>
-                        <li><a href="#"><i class="fa fa-volume-control-phone" aria-hidden="true"></i></a>+256 782710288<br>+256 706090938</li>
-                     </ul>
-                     <ul class="social_icon">
-                        <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                        <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li> <a href="#"> <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                        <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
-                     </ul>
-                  </div>
-                  <div class="col-lg-2 col-md-6 col-sm-6">
-                     <h3>Menus</h3>
-                     <ul class="link_icon">
-                        <li class="active"> <a href="index.php"> Home</a></li>
-                        <li>
-                           <a href="about.html">
-                              </i>About Us
-                        </li>
-                        <!-- <li> <a href="service.html"> </i>Services</a></li> -->
-                        <!-- <li> <a href="team.html"></i>Team</a></li> -->
-                        <li> <a href="testimonial.php"></i>Testimonials</a></li>
-                        <li> <a href="contact.php"></i>Contact us</a></li>
-                     </ul>
-                  </div>
-                  <div class="col-lg-2 col-md-6 col-sm-6">
-                     <h3>Services</h3>
-                     <ul class="link_icon">
-                        <li> <a href="#"> Registration </a></li>
-                        <li>
-                           <a href="#">
-                              Monitoring
-                        </li>
-                        <li> <a href="#"> Tracking </a></li>
-                        <li> <a href="#">Reports</a></li>
-                        <!-- <li> <a href="#"> November 25, 2019</a></li> -->
-                     </ul>
-                  </div>
-                  <div class="col-lg-3 col-md-6 col-sm-6">
-                     <h3>Newsletter</h3>
-                     <form id="request" class="main_form">
-                        <div class="row">
-                           <div class="col-md-12 ">
-                              <input class="news" placeholder="Your Email" type="type" name="Your Email">
-                           </div>
-                           <div class="col-md-12">
-                              <button class="send_btn">Send</button>
-                           </div>
-                        </div>
-                     </form>
-                  </div>
-               </div>
-            </div>
-            <div class="copyright">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-md-12">
-                        <p>© 2022 All Rights Reserved. TMIS</a></p>
-                     </div>
-                     </div>
+                     <p>© 2022 All Rights Reserved. TMIS</p>
+                     <!-- <a href="https://html.design/"></a> -->
                   </div>
                </div>
             </div>
          </div>
-      </footer>
-      <!-- end footer -->
-      <!-- Javascript files-->
-      <script src="js/jquery.min.js"></script>
-      <script src="js/popper.min.js"></script>
-      <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/jquery-3.0.0.min.js"></script>
-      <script src="js/owl.carousel.min.js"></script>
-      <!-- sidebar -->
-      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-      <script src="js/custom.js"></script>
-      <!-- <script src="js/app.js"></script> -->
-   </body>
+      </div>
+   </footer>
+   <!-- end footer -->
+   <!-- Javascript files-->
+   <script src="js/jquery.min.js"></script>
+   <script src="js/popper.min.js"></script>
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script src="js/jquery-3.0.0.min.js"></script>
+   <script src="js/owl.carousel.min.js"></script>
+   <!-- sidebar -->
+   <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+   <script src="js/custom.js"></script>
+</body>
+
 </html>

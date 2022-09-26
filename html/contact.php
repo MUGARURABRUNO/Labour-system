@@ -180,94 +180,98 @@
          </div>
       </div>
       <!-- end contact  section -->
-      <!--  footer -->
-      <footer >
-         <div class="footer">
+       <!--  footer -->
+   <footer>
+      <div class="footer">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <a class="logo2" href="#"><img src="images/tmis.png" alt="#" /></a>
+               </div>
+               <div class="col-lg-5 col-md-6 col-sm-6">
+                  <h3>Contact Us</h3>
+                  <ul class="location_icon">
+                     <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a> Kampala,
+                        <br> 
+                     </li>
+                     <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>tmis@gmail.com<br></li>
+                     <li><a href="#"><i class="fa fa-volume-control-phone" aria-hidden="true"></i></a>+256 782710288<br>+256 706090938</li>
+                  </ul>
+                  <ul class="social_icon">
+                     <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                     <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
+                     <li> <a href="#"> <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                     <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
+                  </ul>
+               </div>
+               <div class="col-lg-2 col-md-6 col-sm-6">
+                  <h3>Menus</h3>
+                  <ul class="link_icon">
+                     <li class="active"> <a href="index.php"> Home</a></li>
+                     <li>
+                        <a href="about.php">
+                           </i>About Us
+                     </li>
+                     <!-- <li> <a href="service.html"> </i>Services</a></li> -->
+                     <!-- <li> <a href="team.html"></i>Team</a></li> -->
+                     <li> <a href="help.php"></i>Help Desk</a></li>
+                     <li> <a href="contact.php"></i>Contact us</a></li>
+                  </ul>
+               </div>
+               <div class="col-lg-2 col-md-6 col-sm-6">
+                  <h3>Services</h3>
+                  <ul class="link_icon">
+                     <li> <a href="#">Tracking</a></li>
+                     <li>
+                        <a href="#">
+                           </i>Monitoring
+                     </li>
+                     <!-- <li> <a href="service.html"> </i>Services</a></li> -->
+                     <!-- <li> <a href="team.html"></i>Team</a></li> -->
+                     <li> <a href="#"></i>Management</a></li>
+                     <li> <a href="#"></i>Reports</a></li>
+                  </ul>
+               </div>
+              
+               <div class="col-lg-3 col-md-6 col-sm-6">
+                  <h3>Newsletter</h3>
+                  <form id="request" class="main_form">
+                     <div class="row">
+                        <div class="col-md-12 ">
+                           <input class="news" placeholder="Your Email" type="type" name="Your Email">
+                        </div>
+                        <div class="col-md-12">
+                           <button class="send_btn">Send</button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+         <div class="copyright">
             <div class="container">
                <div class="row">
                   <div class="col-md-12">
-                     <a class="logo2" href="#"><img src="images/tmis.png" alt="#" /></a>
-                  </div>
-                  <div class="col-lg-5 col-md-6 col-sm-6">
-                     <h3>Contact Us</h3>
-                     <ul class="location_icon">
-                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a> Kampala,
-                           <br> 
-                        </li>
-                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>tmis@gmail.com<br></li>
-                        <li><a href="#"><i class="fa fa-volume-control-phone" aria-hidden="true"></i></a>+256 782710288<br>+256 706090938</li>
-                     </ul>
-                     <ul class="social_icon">
-                        <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                        <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li> <a href="#"> <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                        <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
-                     </ul>
-                  </div>
-                  <div class="col-lg-2 col-md-6 col-sm-6">
-                     <h3>Menus</h3>
-                     <ul class="link_icon">
-                        <li class="active"> <a href="index.php"> Home</a></li>
-                        <li>
-                           <a href="about.html">
-                              </i>About Us
-                        </li>
-                        <!-- <li> <a href="service.html"> </i>Services</a></li> -->
-                        <!-- <li> <a href="team.html"></i>Team</a></li> -->
-                        <li> <a href="testimonial.php"></i>Testimonials</a></li>
-                        <li> <a href="contact.php"></i>Contact us</a></li>
-                     </ul>
-                  </div>
-                  <div class="col-lg-2 col-md-6 col-sm-6">
-                     <h3>Services</h3>
-                     <ul class="link_icon">
-                        <li> <a href="#"> Registration </a></li>
-                        <li>
-                           <a href="#">
-                              Monitoring
-                        </li>
-                        <li> <a href="#"> Tracking </a></li>
-                        <li> <a href="#">Reports</a></li>
-                        <!-- <li> <a href="#"> November 25, 2019</a></li> -->
-                     </ul>
-                  </div>
-                  <div class="col-lg-3 col-md-6 col-sm-6">
-                     <h3>Newsletter</h3>
-                     <form id="request" class="main_form">
-                        <div class="row">
-                           <div class="col-md-12 ">
-                              <input class="news" placeholder="Your Email" type="type" name="Your Email">
-                           </div>
-                           <div class="col-md-12">
-                              <button class="send_btn">Send</button>
-                           </div>
-                        </div>
-                     </form>
-                  </div>
-               </div>
-            </div>
-            <div class="copyright">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-md-12">
-                        <p>© 2022 All Rights Reserved. TMIS</a></p>
-                     </div>
+                     <p>© 2022 All Rights Reserved. TMIS</p>
+                     <!-- <a href="https://html.design/"></a> -->
                   </div>
                </div>
             </div>
          </div>
-      </footer>
-      <!-- end footer -->
-      <!-- Javascript files-->
-      <script src="js/jquery.min.js"></script>
-      <script src="js/popper.min.js"></script>
-      <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/jquery-3.0.0.min.js"></script>
-      <script src="js/owl.carousel.min.js"></script>
-      <!-- sidebar -->
-      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-      <script src="js/custom.js"></script>
-   </body>
+      </div>
+   </footer>
+   <!-- end footer -->
+   <!-- Javascript files-->
+   <script src="js/jquery.min.js"></script>
+   <script src="js/popper.min.js"></script>
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script src="js/jquery-3.0.0.min.js"></script>
+   <script src="js/owl.carousel.min.js"></script>
+   <!-- sidebar -->
+   <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+   <script src="js/custom.js"></script>
+</body>
+
 </html>
 <?php
 include 'config.php';

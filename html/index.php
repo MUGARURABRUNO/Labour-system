@@ -234,11 +234,11 @@ if (isset($_POST['REGISTER'])) {
                <div class="ban_img">
                   <!-- <figure><img src="images/crop.png" alt="#" height="200" /> -->
                   <div id="stage">
-                  <a href="1.jpg"><img src="images/crop.png" width="360" height="270"></a>
-                   <a href="2.jpg"><img src="images/coat.jpg" width="360" height="270"></a>
-                   <a href="3.jpg"><img src="images/Premier.jpg" width="360" height="270"></a>
-                   <a href="4.jpg"><img src="images/logo.png" width="360" height="270"></a>
-                   <a href="5.jpg"><img src="images/service_icon6.png" width="360" height="270"></a>
+                  <a href="images/crop.png"><img src="images/crop.png" width="360" height="270"></a>
+                   <a href="images/coat.jpg"><img src="images/coat.jpg" width="360" height="270"></a>
+                   <a href="images/Premier.jpg"><img src="images/Premier.jpg" width="360" height="270"></a>
+                   <a href="images/logo.png"><img src="images/logo.png" width="360" height="270"></a>
+                   <a href="images/service_icon6.png"><img src="images/service_icon6.png" width="360" height="270"></a>
                    </div>
                
                </figure>
@@ -759,15 +759,37 @@ if (isset($_POST['REGISTER'])) {
             <li data-target="#testimo" data-slide-to="1"></li>
             <li data-target="#testimo" data-slide-to="2"></li>
          </ol>
+         
+         
+
+
+ 
+
          <div class="carousel-inner">
             <div class="carousel-item active">
+          
                <div class="container">
                   <div class="carousel-caption ">
                      <div class="row">
                         <div class="col-md-6 offset-md-3">
+                        <?php
+                        // retrieving data
+$sql_fetch="SELECT * FROM testimony where 1";
+$sql_query=mysqli_query($conn, $sql_fetch);
+
+?>
                            <div class="test_box">
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-                              <i><img src="images/cos.jpg" alt="#" /></i> <span>Consectetur</span>
+                           <?php
+  while($rows=mysqli_fetch_assoc($sql_query)){
+  
+ ?>
+  
+                              <p><?php echo $rows['message']; ?> </p>
+                              <i><img style="width:200px; height200px:" src="images/<?php echo $rows['photo']; ?>" alt="#" /></i> <span><?php echo $rows['name']; ?></span>
+                              <?php
+}
+?>
+
                            </div>
                         </div>
                      </div>
@@ -779,23 +801,53 @@ if (isset($_POST['REGISTER'])) {
                   <div class="carousel-caption">
                      <div class="row">
                         <div class="col-md-6 offset-md-3">
+                        <?php
+                        // retrieving data
+$sql_fetch="SELECT * FROM testimony where testimony_id='2'";
+$sql_query=mysqli_query($conn, $sql_fetch);
+
+?>
                            <div class="test_box">
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-                              <i><img src="images/cos.jpg" alt="#" /></i> <span>Consectetur</span>
+                           <?php
+  while($rows=mysqli_fetch_assoc($sql_query)){
+  
+ ?>
+  
+                              <p><?php echo $rows['message']; ?> </p>
+                              <i><img style="width:200px; height200px:" src="images/<?php echo $rows['photo']; ?>" alt="#" /></i> <span><?php echo $rows['name']; ?></span>
+                              <?php
+}
+?>
+
                            </div>
                         </div>
                      </div>
                   </div>
                </div>
-            </div>
+            </div> 
             <div class="carousel-item">
                <div class="container">
                   <div class="carousel-caption">
                      <div class="row">
                         <div class="col-md-6 offset-md-3">
+                        <?php
+                        // retrieving data
+$sql_fetch="SELECT * FROM testimony where testimony_id='3'";
+$sql_query=mysqli_query($conn, $sql_fetch);
+
+?>
                            <div class="test_box">
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-                              <i><img src="images/cos.jpg" alt="#" /></i> <span>Consectetur</span>
+                           <?php
+  while($rows=mysqli_fetch_assoc($sql_query)){
+  
+ ?>
+  
+                              <p><?php echo $rows['message']; ?> </p>
+                              <i><img style="width:200px; height200px:" src="images/<?php echo $rows['photo']; ?>" alt="#" /></i> <span><?php echo $rows['name']; ?></span>
+                              <?php
+}
+?>
+
                            </div>
                         </div>
                      </div>
@@ -810,6 +862,7 @@ if (isset($_POST['REGISTER'])) {
             <i class="fa fa-chevron-right" aria-hidden="true"></i>
          </a>
       </div>
+ 
    </div>
    <!-- end testimonial -->
    <!-- contact  section -->
@@ -836,10 +889,10 @@ if (isset($_POST['REGISTER'])) {
 
                   <div style="margin-left:27%;" class="row">
                      <div  class="col-md-12 ">
-                        <input style="width: 500px;" class="contact_control" placeholder=" Name" type="text" name="name">
+                        <input style="width: 500px; height:50px; border-radius:12px;" class="contact_control" placeholder=" Name" type="text" name="name">
                      </div>
                      <div class="col-md-12">
-                        <input style="width: 500px; margin-top:30px;" class="contact_control" placeholder="Email" type="email" name="email">
+                        <input style="width: 500px; height:50px; margin-top:30px; border-radius:12px;" class="contact_control" placeholder="Email" type="email" name="email">
                      </div>
 
                      <div class="col-md-12">
@@ -853,7 +906,7 @@ if (isset($_POST['REGISTER'])) {
                         <textarea style="width: 500px; height:100px; margin-top:30px;" name="message" class="textarea" placeholder="Message"  >Message </textarea>
                      </div>
                      <div class="col-md-12">
-                        <button style="width: 100px; background-color:orange; border-radius:12px;" class="send_btn" type="submit" name="REGISTER">Submit</button>
+                        <button style="width: 100px; height:50px; background-color:orange; border-radius:12px;" class="send_btn" type="submit" name="REGISTER">Submit</button>
                      </div>
                </form>
             </div>
@@ -898,8 +951,22 @@ if (isset($_POST['REGISTER'])) {
                      </li>
                      <!-- <li> <a href="service.html"> </i>Services</a></li> -->
                      <!-- <li> <a href="team.html"></i>Team</a></li> -->
-                     <li> <a href="testimonial.php"></i>Testimonials</a></li>
+                     <li> <a href="help.php"></i>Help Desk</a></li>
                      <li> <a href="contact.php"></i>Contact us</a></li>
+                  </ul>
+               </div>
+               <div class="col-lg-2 col-md-6 col-sm-6">
+                  <h3>Services</h3>
+                  <ul class="link_icon">
+                     <li> <a href="#">Tracking</a></li>
+                     <li>
+                        <a href="#">
+                           </i>Monitoring
+                     </li>
+                     <!-- <li> <a href="service.html"> </i>Services</a></li> -->
+                     <!-- <li> <a href="team.html"></i>Team</a></li> -->
+                     <li> <a href="#"></i>Management</a></li>
+                     <li> <a href="#"></i>Reports</a></li>
                   </ul>
                </div>
               
