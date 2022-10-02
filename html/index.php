@@ -205,7 +205,7 @@ if (isset($_POST['REGISTER'])) {
                   </div>
                   <div class="col-md-3 col-sm-5 d_none">
                      <ul class="sign">
-                        <li><a class="sign_btn" href="pages-sign-in.php">Login</a></li>
+                        <li><a class="sign_btn" href="login.php">Login</a></li>
                         
                         <!-- <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li> -->
                       
@@ -234,11 +234,11 @@ if (isset($_POST['REGISTER'])) {
                <div class="ban_img">
                   <!-- <figure><img src="images/crop.png" alt="#" height="200" /> -->
                   <div id="stage">
-                  <a href="images/crop.png"><img src="images/crop.png" width="360" height="270"></a>
-                   <a href="images/coat.jpg"><img src="images/coat.jpg" width="360" height="270"></a>
-                   <a href="images/Premier.jpg"><img src="images/Premier.jpg" width="360" height="270"></a>
-                   <a href="images/logo.png"><img src="images/logo.png" width="360" height="270"></a>
-                   <a href="images/service_icon6.png"><img src="images/service_icon6.png" width="360" height="270"></a>
+                  <a href="images/Premier.jpg"><img src="images/Premier.jpg" width="360" height="270"></a>
+                   <a href="images/export.jpg"><img src="images/export.jpg" width="360" height="270"></a>
+                   <a href="images/export1.jpg"><img src="images/export1.jpg" width="360" height="270"></a>
+                   <a href="images/export4.jpg"><img src="images/export4.jpg" width="360" height="500"></a>
+                   <a href="images/export5.jpg"><img src="images/export5.jpg" width="360" height="270"></a>
                    </div>
                
                </figure>
@@ -742,7 +742,7 @@ if (isset($_POST['REGISTER'])) {
    
    <!-- end team  section -->
    <!-- testimonial -->
-   <div id="client" class="testimonial">
+   <!-- <div id="client" class="testimonial">
       <div class="container">
          <div class="row">
             <div class="col-md-12">
@@ -863,58 +863,170 @@ $sql_query=mysqli_query($conn, $sql_fetch);
          </a>
       </div>
  
-   </div>
-   <!-- end testimonial -->
-   <!-- contact  section -->
-   <div id="contact" class="contact ">
-      <div class="container">
-         <div class="row">
-            <div class="col-md-12">
-               <div class="titlepage">
-                  <h2><strong class="yellow">Testify</strong><br>Share With Us</h2>
+   </div> -->
+   <!-- end testimonial
+        <!-- contact  section -->
+        <div id="contact" class="contact ">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2><strong class="yellow">Contact us</strong><br>Share with us</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-8 offset-md-2">
+                  <form id="post_form" class="contact_form" method="POST">
+                     <div class="row">
+                        <div class="col-md-12 ">
+                           <input class="contact_control" placeholder=" Name" type="text" name="Name"> 
+                        </div>
+                        <div class="col-md-12">
+                           <input class="contact_control" placeholder="Email" type="text" name="email"> 
+                        </div>
+                        
+                        <div class="col-md-12">
+                           <textarea class="textarea" placeholder="Message" type="text" name="Message">Message </textarea>
+                        </div>
+                        <div class="col-md-12">
+                           <input type="submit" class="send_btn" value="Send" name="send">
+                        </div>
+                  </form>
+                  </div>
                </div>
             </div>
          </div>
-         <div class="row">
-            <div class="col-md-8 offset-md-2">
-               <form action="" id="post_form" class="contact_form"  method="post" enctype="multipart/form-data">
+      </div>
+      <!-- end contact  section -->
 
-                    
+        <!-- team  section -->
+        <div id="team" class="team">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2><strong class="yellow">Partners</strong><br>Our partners</h2>
+                  </div>
+               </div>
             </div>
-            <?php if (isset($_POST['success'])) { ?>
-     		<p class="success"><?php echo $_POST['success']; ?></p>
-     	<?php } ?>
+            <div class="row">
+               <div class="col-md-12">
+                  <div id="team" class="carousel slide team_Carousel " data-ride="carousel">
+                     <ol class="carousel-indicators">
+                        <li data-target="#team" data-slide-to="0" class="active"></li>
+                        <li data-target="#team" data-slide-to="1"></li>
+                        <li data-target="#team" data-slide-to="2"></li>
+                     </ol>
+                     <div class="carousel-inner">
+                        <div class="carousel-item active">
+                           <div class="container">
+                              <div class="carousel-caption ">
+                                 <div class="row">
+                                    <div class="col-md-4 col-sm-6">
+                                       <div id="ho_bg" class="team_img">
+                                          <img src="images/labour.jpg"style="width:200px; height:200px;" alt="#"/>
+                                          <div class="">
+                                             <!-- <ul class="social_icont">
+                                                <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                                                <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                <li> <a href="#">   <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                                <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
+                                             </ul> -->
+                                          </div> 
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                       <div id="ho_bg"  class="team_img">
+                                          <img src="images/labour1.png" style="width:200px; height:200px;" alt="#"/>
+                                           <div class="">
+                                             <!-- <ul class="social_icont">
+                                                <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                                                <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                <li> <a href="#">   <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                                <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
+                                             </ul> -->
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 d_none1">
+                                       <div id="ho_bg"  class="team_img ">
+                                          <img src="images/labour2.jpg" style="width:200px; height:200px;" alt="#"/>
+                                          <div class="">
+                                             <!-- <ul class="social_icont">
+                                                <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                                                <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                <li> <a href="#">   <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                                <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
+                                             </ul> -->
+                                          </div> 
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                           <div class="container">
+                              <div class="carousel-caption">
+                                 <div class="row">
+                                    <div class="col-md-4 col-sm-6 d_none1">
+                                       <div id="ho_bg"  class="team_img ">
+                                          <img src="images/labour3.jpg" style="width:200px; height:200px;" alt="#"/>
+                                           <div class="">
+                                             <!-- <ul class="social_icont">
+                                                <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                                                <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                <li> <a href="#">   <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                                <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
+                                             </ul> -->
+                                          </div> 
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                       <div id="ho_bg"  class="team_img">
+                                          <img src="images/labour4.jpg" style="width:200px; height:200px;" alt="#"/>
+                                          <div class="">
+                                             <!-- <ul class="social_icont">
+                                                <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                                                <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                <li> <a href="#">   <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                                <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
+                                             </ul> -->
+                                          </div> 
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                       <div id="ho_bg"  class="team_img">
+                                          <img src="images/labour5.png" style="width:200px; height:200px;" alt="#"/>
+                                           <div class="">
+                                             <!-- <ul class="social_icont">
+                                                <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                                                <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                <li> <a href="#">   <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                                <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
+                                             </ul> -->
+                                          </div> 
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
 
-		 
-
-                  <div style="margin-left:27%;" class="row">
-                     <div  class="col-md-12 ">
-                        <input style="width: 500px; height:50px; border-radius:12px;" class="contact_control" placeholder=" Name" type="text" name="name">
                      </div>
-                     <div class="col-md-12">
-                        <input style="width: 500px; height:50px; margin-top:30px; border-radius:12px;" class="contact_control" placeholder="Email" type="email" name="email">
-                     </div>
-
-                     <div class="col-md-12">
-                        <label for="">Photo</label>
-                        <input style="width: 500px; margin-top:30px;" class="contact_control" type="file" name="photo">
-                     </div>
-                     <!-- <div class="col-md-12">
-                        <input class="contact_control" placeholder="Phone Number " type="type" name="Phone Number ">
-                     </div> -->
-                     <div class="col-md-12">
-                        <textarea style="width: 500px; height:100px; margin-top:30px;" name="message" class="textarea" placeholder="Message"  >Message </textarea>
-                     </div>
-                     <div class="col-md-12">
-                        <button style="width: 100px; height:50px; background-color:orange; border-radius:12px;" class="send_btn" type="submit" name="REGISTER">Submit</button>
-                     </div>
-               </form>
+                     <a class="carousel-control-prev" href="#team" role="button" data-slide="prev">
+                     <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                     </a>
+                     <a class="carousel-control-next" href="#team" role="button" data-slide="next">
+                     <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                     </a>
+                  </div>
+               </div>
             </div>
          </div>
       </div>
-   </div>
-   </div>
-   <!-- end contact  section -->
+      <!-- end team  section -->
 
 
    <!--  footer -->
@@ -1010,3 +1122,26 @@ $sql_query=mysqli_query($conn, $sql_fetch);
 </body>
 
 </html>
+
+<?php
+include 'config.php';
+
+if (isset($_POST['send'])){
+   
+   $Name = $_POST['Name'];
+   $email = $_POST['email'];
+   $Message = $_POST['Message'];
+      
+      
+    
+   $sql_insert = "INSERT INTO `contact`(`Name`,`email`,`Message`) VALUES ('$Name','$email','$Message')";
+   $sql_query = mysqli_query($conn, $sql_insert);
+   if ($sql_query == TRUE) {
+    echo "successful";
+     
+   } else {
+    echo mysqli_error($conn);
+      }
+    }
+
+?>

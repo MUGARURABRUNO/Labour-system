@@ -169,7 +169,7 @@
                </div>
                <div class="col-md-12 col-lg-5">
                   <div class="about_img">
-                     <figure><img src="images/about_img2.jpg" alt="#"/></figure>
+                     <figure><img src="images/abc.jpg" style="height:500px;" alt="#"/></figure>
                   </div>
                </div>
             </div>
@@ -202,41 +202,41 @@
                                  <div class="row">
                                     <div class="col-md-4 col-sm-6">
                                        <div id="ho_bg" class="team_img">
-                                          <img src="images/team1.png" alt="#"/>
-                                          <div class="ho_socal">
-                                             <ul class="social_icont">
+                                          <img src="images/labour.jpg"style="width:200px; height:200px;" alt="#"/>
+                                          <div class="">
+                                             <!-- <ul class="social_icont">
                                                 <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
                                                 <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
                                                 <li> <a href="#">   <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                                                 <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
-                                             </ul>
-                                          </div>
+                                             </ul> -->
+                                          </div> 
                                        </div>
                                     </div>
                                     <div class="col-md-4 col-sm-6">
                                        <div id="ho_bg"  class="team_img">
-                                          <img src="images/team2.png" alt="#"/>
-                                          <div class="ho_socal">
-                                             <ul class="social_icont">
+                                          <img src="images/labour1.png" style="width:200px; height:200px;" alt="#"/>
+                                           <div class="">
+                                             <!-- <ul class="social_icont">
                                                 <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
                                                 <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
                                                 <li> <a href="#">   <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                                                 <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
-                                             </ul>
+                                             </ul> -->
                                           </div>
                                        </div>
                                     </div>
                                     <div class="col-md-4 col-sm-6 d_none1">
                                        <div id="ho_bg"  class="team_img ">
-                                          <img src="images/team3.png" alt="#"/>
-                                          <div class="ho_socal">
-                                             <ul class="social_icont">
+                                          <img src="images/labour2.jpg" style="width:200px; height:200px;" alt="#"/>
+                                          <div class="">
+                                             <!-- <ul class="social_icont">
                                                 <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
                                                 <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
                                                 <li> <a href="#">   <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                                                 <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
-                                             </ul>
-                                          </div>
+                                             </ul> -->
+                                          </div> 
                                        </div>
                                     </div>
                                  </div>
@@ -249,94 +249,48 @@
                                  <div class="row">
                                     <div class="col-md-4 col-sm-6 d_none1">
                                        <div id="ho_bg"  class="team_img ">
-                                          <img src="images/team1.png" alt="#"/>
-                                          <div class="ho_socal">
-                                             <ul class="social_icont">
+                                          <img src="images/labour3.jpg" style="width:200px; height:200px;" alt="#"/>
+                                           <div class="">
+                                             <!-- <ul class="social_icont">
                                                 <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
                                                 <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
                                                 <li> <a href="#">   <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                                                 <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
-                                             </ul>
-                                          </div>
+                                             </ul> -->
+                                          </div> 
                                        </div>
                                     </div>
                                     <div class="col-md-4 col-sm-6">
                                        <div id="ho_bg"  class="team_img">
-                                          <img src="images/team2.png" alt="#"/>
-                                          <div class="ho_socal">
-                                             <ul class="social_icont">
+                                          <img src="images/labour4.jpg" style="width:200px; height:200px;" alt="#"/>
+                                          <div class="">
+                                             <!-- <ul class="social_icont">
                                                 <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
                                                 <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
                                                 <li> <a href="#">   <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                                                 <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
-                                             </ul>
-                                          </div>
+                                             </ul> -->
+                                          </div> 
                                        </div>
                                     </div>
                                     <div class="col-md-4 col-sm-6">
                                        <div id="ho_bg"  class="team_img">
-                                          <img src="images/team3.png" alt="#"/>
-                                          <div class="ho_socal">
-                                             <ul class="social_icont">
+                                          <img src="images/labour5.png" style="width:200px; height:200px;" alt="#"/>
+                                           <div class="">
+                                             <!-- <ul class="social_icont">
                                                 <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
                                                 <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
                                                 <li> <a href="#">   <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                                                 <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
-                                             </ul>
-                                          </div>
+                                             </ul> -->
+                                          </div> 
                                        </div>
                                     </div>
                                  </div>
                               </div>
                            </div>
                         </div>
-                        <div class="carousel-item">
-                           <div class="container">
-                              <div class="carousel-caption">
-                                 <div class="row">
-                                    <div class="col-md-4 col-sm-6">
-                                       <div id="ho_bg"  class="team_img">
-                                          <img src="images/team1.png" alt="#"/>
-                                          <div class="ho_socal">
-                                             <ul class="social_icont">
-                                                <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                                <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li> <a href="#">   <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                                <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
-                                             </ul>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 d_none1">
-                                       <div id="ho_bg"  class="team_img ">
-                                          <img src="images/team2.png" alt="#"/>
-                                          <div class="ho_socal">
-                                             <ul class="social_icont">
-                                                <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                                <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li> <a href="#">   <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                                <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
-                                             </ul>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6">
-                                       <div id="ho_bg"  class="team_img">
-                                          <img src="images/team3.png" alt="#"/>
-                                          <div class="ho_socal">
-                                             <ul class="social_icont">
-                                                <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                                <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li> <a href="#">   <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                                <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
-                                             </ul>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
+
                      </div>
                      <a class="carousel-control-prev" href="#team" role="button" data-slide="prev">
                      <i class="fa fa-chevron-left" aria-hidden="true"></i>
