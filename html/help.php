@@ -42,7 +42,56 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
       
-     
+    <style>
+/* Style The Dropdown Button */
+.dropbtn {
+  background-color: blue;
+  width:300px;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: orange;
+}
+</style>
+
 	<title>Help Center | TMIS</title>
 	
    </head>
@@ -182,7 +231,13 @@
                                         </div>
 
                                         <div class="help-btn">
-                                            <a href="" class="btn btn-primary"><span>New Request</span></a>
+                                        <div class="dropdown">
+  <button class="dropbtn">New Request</button>
+  <div class="dropdown-content">
+    <a href="problem.php">Problem</a>
+    <a href="enquiry.php">Enquiry</a>
+  </div>
+</div>
                                         </div>
 						<div class="nk-block-head nk-block-head-lg">
 							
@@ -406,16 +461,35 @@ for(i= 0; i < len; i++){
                      <li> <a href="#"></i>Reports</a></li>
                   </ul>
                </div>
+               <?php
+include 'config.php';
+
+if (isset($_POST['get'])){
+   
+   $email = $_POST['email'];
+    
+   $sql_news = "INSERT INTO `news`(`email`) VALUES ('$email')";
+   $news = mysqli_query($conn,$sql_news);
+   if ($news == TRUE) {
+   //  echo "successful";
+     
+   } else {
+    echo mysqli_error($conn);
+      }
+    }
+
+?>
               
                <div class="col-lg-3 col-md-6 col-sm-6">
                   <h3>Newsletter</h3>
-                  <form id="request" class="main_form">
+                  <form id="request" class="main_form" action="" method="post" enctype="multipart/form-data">
                      <div class="row">
                         <div class="col-md-12 ">
-                           <input class="news" placeholder="Your Email" type="type" name="Your Email">
+                           <input class="news"  type="email" name="email" placeholder="Your Email">
                         </div>
                         <div class="col-md-12">
-                           <button class="send_btn">Send</button>
+                           <button class="send_btn" type="submit" name="get" > Send</button>
+                           <!-- <input type="submit" class="send_btn" value="Send" name="NEWS"> -->
                         </div>
                      </div>
                   </form>
@@ -447,3 +521,26 @@ for(i= 0; i < len; i++){
 </body>
 
 </html>
+
+<?php
+include 'config.php';
+
+if (isset($_POST['send'])){
+   
+   $Name = $_POST['Name'];
+   $email = $_POST['email'];
+   $Message = $_POST['Message'];
+      
+      
+    
+   $sql_insert = "INSERT INTO `contact`(`Name`,`email`,`Message`) VALUES ('$Name','$email','$Message')";
+   $sql_query = mysqli_query($conn, $sql_insert);
+   if ($sql_query == TRUE) {
+    echo "successful";
+     
+   } else {
+    echo mysqli_error($conn);
+      }
+    }
+
+?>

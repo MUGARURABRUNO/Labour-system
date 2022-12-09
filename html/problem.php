@@ -247,8 +247,8 @@ if (isset($_POST['SUBMIT'])) {
          </div>
       </div>
       <!-- end contact  section -->
-    <!--  footer -->
-    <footer>
+   <!--  footer -->
+   <footer>
       <div class="footer">
          <div class="container">
             <div class="row">
@@ -299,16 +299,35 @@ if (isset($_POST['SUBMIT'])) {
                      <li> <a href="#"></i>Reports</a></li>
                   </ul>
                </div>
+               <?php
+include 'config.php';
+
+if (isset($_POST['get'])){
+   
+   $email = $_POST['email'];
+    
+   $sql_news = "INSERT INTO `news`(`email`) VALUES ('$email')";
+   $news = mysqli_query($conn,$sql_news);
+   if ($news == TRUE) {
+   //  echo "successful";
+     
+   } else {
+    echo mysqli_error($conn);
+      }
+    }
+
+?>
               
                <div class="col-lg-3 col-md-6 col-sm-6">
                   <h3>Newsletter</h3>
-                  <form id="request" class="main_form">
+                  <form id="request" class="main_form" action="" method="post" enctype="multipart/form-data">
                      <div class="row">
                         <div class="col-md-12 ">
-                           <input class="news" placeholder="Your Email" type="type" name="Your Email">
+                           <input class="news"  type="email" name="email" placeholder="Your Email">
                         </div>
                         <div class="col-md-12">
-                           <button class="send_btn">Send</button>
+                           <button class="send_btn" type="submit" name="get" > Send</button>
+                           <!-- <input type="submit" class="send_btn" value="Send" name="NEWS"> -->
                         </div>
                      </div>
                   </form>
@@ -340,26 +359,26 @@ if (isset($_POST['SUBMIT'])) {
 </body>
 
 </html>
-<?php
 
+<?php
 include 'config.php';
 
- if (isset($_POST['REGISTER'])) {
-  $a_name = $_POST['a_name'];
-  $email = $_POST['email'];
-  $address = $_POST['address'];
-  $experience = $_POST['experience'];
-  $image = $_POST['image'];
-  $password = $_POST['password'];
-  
-
-  $sql_insert = "INSERT INTO `agency`(`a_name`,`email`,`address`,`experience`,`image`,`password`) VALUES ('$a_name','$email','$address','$experience','$image','$password')";
-  $sql_query = mysqli_query($conn, $sql_insert);
-  if ($sql_query == TRUE) {
+if (isset($_POST['send'])){
+   
+   $Name = $_POST['Name'];
+   $email = $_POST['email'];
+   $Message = $_POST['Message'];
+      
+      
+    
+   $sql_insert = "INSERT INTO `contact`(`Name`,`email`,`Message`) VALUES ('$Name','$email','$Message')";
+   $sql_query = mysqli_query($conn, $sql_insert);
+   if ($sql_query == TRUE) {
     echo "successful";
-    // header('location: pages-clients.html');
-  } else {
+     
+   } else {
     echo mysqli_error($conn);
-  }
-}
+      }
+    }
+
 ?>

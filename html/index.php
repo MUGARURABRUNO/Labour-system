@@ -1081,16 +1081,35 @@ $sql_query=mysqli_query($conn, $sql_fetch);
                      <li> <a href="#"></i>Reports</a></li>
                   </ul>
                </div>
+               <?php
+include 'config.php';
+
+if (isset($_POST['get'])){
+   
+   $email = $_POST['email'];
+    
+   $sql_news = "INSERT INTO `news`(`email`) VALUES ('$email')";
+   $news = mysqli_query($conn,$sql_news);
+   if ($news == TRUE) {
+   //  echo "successful";
+     
+   } else {
+    echo mysqli_error($conn);
+      }
+    }
+
+?>
               
                <div class="col-lg-3 col-md-6 col-sm-6">
                   <h3>Newsletter</h3>
-                  <form id="request" class="main_form">
+                  <form id="request" class="main_form" action="" method="post" enctype="multipart/form-data">
                      <div class="row">
                         <div class="col-md-12 ">
-                           <input class="news" placeholder="Your Email" type="type" name="Your Email">
+                           <input class="news"  type="email" name="email" placeholder="Your Email">
                         </div>
                         <div class="col-md-12">
-                           <button class="send_btn">Send</button>
+                           <button class="send_btn" type="submit" name="get" > Send</button>
+                           <!-- <input type="submit" class="send_btn" value="Send" name="NEWS"> -->
                         </div>
                      </div>
                   </form>
